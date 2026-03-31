@@ -1,0 +1,261 @@
+import { motion } from "framer-motion";
+import { Download, GraduationCap, Briefcase, Zap, Mail, MapPin, Globe } from "lucide-react";
+
+const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    school: "State University",
+    period: "2021 – 2025",
+    details: "Focused on software engineering, algorithms, and distributed systems. Dean's list achievement.",
+  },
+  {
+    degree: "Full-Stack Web Development",
+    school: "Self-Directed Learning",
+    period: "2020 – 2021",
+    details: "Completed intensive curriculum covering React, Node.js, databases, and modern deployment workflows.",
+  },
+];
+
+const experience = [
+  {
+    role: "Freelance Developer",
+    company: "Self-Employed",
+    period: "2023 – Present",
+    type: "Full-time",
+    bullets: [
+      "Built and shipped 10+ production web apps for clients across various industries",
+      "Reduced client load times by an average of 40% through performance optimization",
+      "Maintained 100% client satisfaction rating on delivered projects",
+    ],
+  },
+  {
+    role: "Open Source Contributor",
+    company: "Various Projects",
+    period: "2022 – Present",
+    type: "Part-time",
+    bullets: [
+      "Contributed to 5+ open-source repositories with merged pull requests",
+      "Improved documentation and wrote test coverage for critical utilities",
+      "Collaborated with maintainers globally via async-first workflows",
+    ],
+  },
+  {
+    role: "Programming Student",
+    company: "Self-Taught",
+    period: "2020 – 2022",
+    type: "Learning",
+    bullets: [
+      "Mastered computer science fundamentals: algorithms, data structures, design patterns",
+      "Built 20+ projects ranging from CLI tools to full-stack web applications",
+      "Participated in online hackathons and competitive programming challenges",
+    ],
+  },
+];
+
+const skills = [
+  { name: "React / Next.js", level: 92 },
+  { name: "TypeScript", level: 88 },
+  { name: "Node.js / Express", level: 82 },
+  { name: "Tailwind CSS", level: 95 },
+  { name: "PostgreSQL", level: 75 },
+  { name: "Python", level: 78 },
+  { name: "Git & DevOps", level: 85 },
+  { name: "UI/UX Design", level: 70 },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+};
+
+function SectionTitle({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-6">
+      <div className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center shrink-0">
+        {icon}
+      </div>
+      <h3 className="text-xs font-mono font-bold uppercase tracking-[0.15em] text-primary">{label}</h3>
+      <div className="flex-1 h-px bg-border/60 ml-1" />
+    </div>
+  );
+}
+
+export default function Resume() {
+  return (
+    <section id="resume" className="py-24 relative overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16"
+        >
+          <div>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">Resume</h2>
+            <p className="text-muted-foreground text-lg">A snapshot of my background, skills, and experience.</p>
+          </div>
+          <a
+            href="/resume.pdf"
+            download
+            className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 shrink-0"
+            data-testid="button-download-resume"
+          >
+            <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+            Download CV
+          </a>
+        </motion.div>
+
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-12 items-start">
+
+          {/* Left column — sidebar */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="space-y-8"
+          >
+            {/* Identity card */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 space-y-4"
+            >
+              <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-primary/30 mb-2">
+                <img src="/avatar.png" alt="Ibrahim Mammadov" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h4 className="text-xl font-display font-bold">Ibrahim Mammadov</h4>
+                <p className="text-sm text-primary font-mono mt-0.5">Full-Stack Developer</p>
+              </div>
+              <div className="space-y-2.5 pt-2 border-t border-border/60">
+                <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <Mail className="w-3.5 h-3.5 text-primary/70 shrink-0" />
+                  <span>ibrahim@example.com</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <MapPin className="w-3.5 h-3.5 text-primary/70 shrink-0" />
+                  <span>Azerbaijan</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <Globe className="w-3.5 h-3.5 text-primary/70 shrink-0" />
+                  <span>Open to remote worldwide</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Education */}
+            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
+              <SectionTitle icon={<GraduationCap className="w-4 h-4 text-primary" />} label="Education" />
+              <div className="space-y-5">
+                {education.map((edu, i) => (
+                  <div key={i} className={i > 0 ? "pt-5 border-t border-border/50" : ""}>
+                    <p className="font-semibold text-foreground text-sm leading-snug mb-1">{edu.degree}</p>
+                    <p className="text-xs font-mono text-primary mb-1">{edu.school}</p>
+                    <p className="text-xs text-muted-foreground font-mono mb-2">{edu.period}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{edu.details}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Skill proficiency */}
+            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
+              <SectionTitle icon={<Zap className="w-4 h-4 text-primary" />} label="Proficiency" />
+              <div className="space-y-4">
+                {skills.map((skill, i) => (
+                  <div key={skill.name}>
+                    <div className="flex justify-between items-center mb-1.5">
+                      <span className="text-xs font-mono text-foreground">{skill.name}</span>
+                      <span className="text-xs font-mono text-primary">{skill.level}%</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.9, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                        className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right column — experience timeline */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 lg:p-8">
+              <SectionTitle icon={<Briefcase className="w-4 h-4 text-primary" />} label="Work Experience" />
+
+              <div className="relative border-l border-primary/20 ml-3 space-y-10">
+                {experience.map((exp, i) => (
+                  <motion.div
+                    key={i}
+                    variants={itemVariants}
+                    className="relative pl-8"
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-background border-2 border-primary shadow-[0_0_12px_2px] shadow-primary/30" />
+
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+                      <div>
+                        <h4 className="text-lg font-display font-bold text-foreground leading-tight">{exp.role}</h4>
+                        <p className="text-sm text-muted-foreground">{exp.company}</p>
+                      </div>
+                      <div className="flex flex-col sm:items-end gap-1 shrink-0">
+                        <span className="text-xs font-mono text-primary">{exp.period}</span>
+                        <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary/80 w-fit">
+                          {exp.type}
+                        </span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2">
+                      {exp.bullets.map((bullet, j) => (
+                        <li key={j} className="flex gap-2.5 text-sm text-muted-foreground leading-relaxed">
+                          <span className="mt-2 w-1 h-1 rounded-full bg-primary/60 shrink-0" />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Highlights row */}
+              <div className="mt-10 pt-8 border-t border-border/60 grid grid-cols-3 gap-4">
+                {[
+                  { label: "Years Coding", value: "3+" },
+                  { label: "Projects Shipped", value: "20+" },
+                  { label: "Happy Clients", value: "10+" },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">{stat.value}</div>
+                    <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
