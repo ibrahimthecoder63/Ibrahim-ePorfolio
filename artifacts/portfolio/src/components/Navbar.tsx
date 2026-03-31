@@ -11,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -19,7 +19,7 @@ export default function Navbar() {
     >
       <div className="text-xl font-display font-bold tracking-tight">
         <a href="#top" className="hover:text-primary transition-colors">
-          IM.
+          IM
         </a>
       </div>
       <nav className="hidden md:flex items-center gap-8">
@@ -34,8 +34,8 @@ export default function Navbar() {
         ))}
       </nav>
       <div className="hidden md:block">
-        <a 
-          href="#contact" 
+        <a
+          href="#contact"
           className="px-5 py-2.5 rounded-full bg-primary/10 text-primary font-medium text-sm border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
         >
           Let's Talk
