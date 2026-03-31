@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "A09lumHK6ul2BXXN9V1ES"
+uri = "file://artifacts/portfolio/public/hero-bg.png"
+type = "image"
+title = "abstract dark tech background"
+
+[[generated]]
+id = "T_mKjlrDudeK5OVkvbgv6"
+uri = "file://artifacts/portfolio/public/avatar.png"
+type = "image"
+title = "abstract avatar"
+
+[[generated]]
+id = "PbsV_NRyQ7JTeIDrVRPEI"
+uri = "file://artifacts/portfolio/public/project-1.png"
+type = "image"
+title = "modern dashboard UI"
+
+[[generated]]
+id = "yq5VJQSl9-tlYjwaLFcFN"
+uri = "file://artifacts/portfolio/public/project-2.png"
+type = "image"
+title = "finance app UI"
+
+[[generated]]
+id = "aE3g8o41VHNhfdAp5ppkV"
+uri = "file://artifacts/portfolio/public/project-3.png"
+type = "image"
+title = "sneaker e-commerce UI"
