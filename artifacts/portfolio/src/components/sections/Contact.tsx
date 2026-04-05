@@ -75,13 +75,13 @@ export default function Contact() {
 
             <div className="space-y-6">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:ibrahim.mammad63@gmail.com"
                 className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-mono text-sm">hello@example.com</span>
+                <span className="font-mono text-sm">ibrahim.mammad63@gmail.com</span>
               </a>
               <div className="flex items-center gap-4 text-muted-foreground">
                 <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center">
