@@ -41,13 +41,15 @@ export default function Navbar() {
           <a
             href="#top"
             data-testid="link-logo"
-            className="relative group text-lg font-black tracking-widest"
+            className="relative group flex items-baseline gap-1.5"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               IM
             </span>
-            <span className="text-foreground/80 text-sm align-super ml-0.5">'s Portfolio</span>
+            <span className="text-xs font-semibold tracking-[0.2em] text-foreground/60 uppercase">
+              's Portfolio
+            </span>
             <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
           </a>
 

@@ -1,8 +1,26 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles } from "lucide-react";
+import { ArrowDownRight, Sparkles, Github, Linkedin, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const typedPhrases = ["Computer Science Student", "Front-End Developer", "Problem Solver"];
+
+const socials = [
+  {
+    label: "GitHub",
+    href: "https://github.com/ibrahim-mammadov",
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/ibrahim-mammadov",
+    icon: Linkedin,
+  },
+  {
+    label: "+1 (000) 000-0000",
+    href: "tel:+10000000000",
+    icon: Phone,
+  },
+];
 
 function useTypewriter(phrases: string[], speed = 75, deleteSpeed = 38, pauseTime = 2200) {
   const [displayed, setDisplayed] = useState("");
@@ -86,15 +104,16 @@ export default function Hero() {
             <Sparkles className="w-3 h-3 opacity-60" />
           </motion.div>
 
-          {/* Heading */}
+          {/* Heading — Orbitron for futuristic look */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-5"
+            className="font-bold leading-[1.08] tracking-tight mb-5"
+            style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            Ibrahim{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary">
+            <span className="text-4xl md:text-6xl lg:text-7xl text-foreground block">Ibrahim</span>
+            <span className="text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary block">
               Mammadov
             </span>
           </motion.h1>
@@ -104,26 +123,47 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center gap-2 mb-8 text-xl md:text-2xl font-mono font-medium text-muted-foreground min-h-[2rem]"
+            className="flex items-center gap-2 mb-6 text-lg md:text-xl font-mono font-medium text-muted-foreground min-h-[1.8rem]"
           >
             <span className="text-primary/60 select-none">&gt;</span>
             <span className="text-foreground/80">{typed}</span>
             <motion.span
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
-              className="inline-block w-[2px] h-[1.2em] bg-primary ml-0.5 translate-y-[1px]"
+              className="inline-block w-[2px] h-[1.1em] bg-primary ml-0.5 translate-y-[1px]"
             />
           </motion.div>
 
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
+          {/* Tagline + socials row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
-            className="text-lg text-muted-foreground font-light max-w-xl leading-relaxed mb-10"
+            transition={{ duration: 0.7, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10"
           >
-            Just a young programmer aspiring to do great things
-          </motion.p>
+            <p className="text-base text-muted-foreground font-light leading-relaxed shrink-0">
+              Just a young programmer aspiring to do great things
+            </p>
+
+            {/* Divider */}
+            <span className="hidden sm:block w-px h-4 bg-border/60 shrink-0" />
+
+            {/* Social links */}
+            <div className="flex items-center gap-2 flex-wrap">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith("tel") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border/60 bg-card/40 backdrop-blur text-xs font-mono text-muted-foreground hover:border-primary/50 hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                >
+                  <s.icon className="w-3 h-3" />
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
