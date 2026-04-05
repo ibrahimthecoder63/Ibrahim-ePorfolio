@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, GraduationCap, Briefcase, Zap, Mail, MapPin, Globe } from "lucide-react";
+import { Download, GraduationCap, Briefcase, Zap, Mail, MapPin, Globe, Trophy, ImageIcon } from "lucide-react";
 
 const education = [
   {
@@ -14,6 +14,18 @@ const education = [
     period: "2020 – 2021",
     details: "Completed intensive curriculum covering React, Node.js, databases, and modern deployment workflows.",
   },
+];
+
+const universityAwards = [
+  "Dean's List — Academic Excellence (2022, 2023)",
+  "Best Capstone Project Award",
+  "Computer Science Department Scholarship",
+];
+
+const highSchoolAwards = [
+  "Ontario Scholar Award",
+  "Academic Achievement in Computer Science",
+  "Honour Roll — All Semesters",
 ];
 
 const experience = [
@@ -166,6 +178,62 @@ export default function Resume() {
                     <p className="text-xs text-muted-foreground leading-relaxed">{edu.details}</p>
                   </div>
                 ))}
+              </div>
+            </motion.div>
+
+            {/* Awards & Diploma */}
+            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
+              <SectionTitle icon={<Trophy className="w-4 h-4 text-primary" />} label="Awards & Achievements" />
+              <div className="space-y-5">
+                {/* University Awards */}
+                <div>
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-secondary mb-3">University</p>
+                  <ul className="space-y-2">
+                    {universityAwards.map((award, i) => (
+                      <li key={i} className="flex gap-2.5 items-start">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary/60 shrink-0" />
+                        <span className="text-xs text-muted-foreground leading-relaxed">{award}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* High School Awards */}
+                <div className="pt-4 border-t border-border/50">
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-primary mb-3">High School</p>
+                  <ul className="space-y-2">
+                    {highSchoolAwards.map((award, i) => (
+                      <li key={i} className="flex gap-2.5 items-start">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                        <span className="text-xs text-muted-foreground leading-relaxed">{award}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Ontario Secondary School Diploma */}
+                <div className="pt-4 border-t border-border/50">
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-3">Ontario Secondary School Diploma</p>
+                  {/* Replace /diploma.jpg with your actual diploma image */}
+                  <div className="relative rounded-xl overflow-hidden border border-border/60 bg-muted/30 aspect-[4/3] group cursor-pointer">
+                    <img
+                      src="/diploma.jpg"
+                      alt="Ontario Secondary School Diploma"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                      }}
+                    />
+                    {/* Shown only when image is missing */}
+                    <div className="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-muted-foreground/50">
+                      <ImageIcon className="w-8 h-8" />
+                      <p className="text-xs font-mono text-center px-4">Upload diploma.jpg to public folder to display your diploma</p>
+                    </div>
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
+                  </div>
+                </div>
               </div>
             </motion.div>
 
