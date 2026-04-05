@@ -11,7 +11,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">together.</span></h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">together.</span></h2>
             <p className="text-lg text-muted-foreground mb-10 font-light max-w-md">
               I'm currently open for new opportunities. Whether you have a project in mind or just want to chat about tech, feel free to reach out.
             </p>
