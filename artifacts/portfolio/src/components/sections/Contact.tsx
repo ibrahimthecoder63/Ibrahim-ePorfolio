@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
 import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
-
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -15,38 +23,28 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!WEB3FORMS_KEY) {
-      setErrorMsg("Contact form is not yet configured. Please check back soon.");
-      setStatus("error");
-      return;
-    }
-
     setStatus("loading");
     setErrorMsg("");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name,
-          email,
-          message,
-          subject: `Portfolio Contact from ${name}`,
-        }),
+        body: JSON.stringify({ name, email, message }),
       });
-      const data = await res.json();
+      const data = (await res.json()) as { success: boolean; error?: string };
       if (data.success) {
         setStatus("success");
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        throw new Error(data.message || "Submission failed");
+        throw new Error(data.error || "Submission failed.");
       }
     } catch (err: unknown) {
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      setErrorMsg(
+        err instanceof Error ? err.message : "Something went wrong. Please try again.",
+      );
       setStatus("error");
     }
   }
