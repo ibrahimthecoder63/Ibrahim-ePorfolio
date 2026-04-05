@@ -1,18 +1,23 @@
 import { motion } from "framer-motion";
-import { Download, GraduationCap, Briefcase, Zap, Mail, MapPin, Globe, Trophy, ImageIcon } from "lucide-react";
+import {
+  Download,
+  GraduationCap,
+  Briefcase,
+  Zap,
+  Mail,
+  MapPin,
+  Globe,
+  Trophy,
+  ImageIcon,
+} from "lucide-react";
 
 const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "State University",
-    period: "2021 – 2025",
-    details: "Focused on software engineering, algorithms, and distributed systems. Dean's list achievement.",
-  },
-  {
-    degree: "Full-Stack Web Development",
-    school: "Self-Directed Learning",
-    period: "2020 – 2021",
-    details: "Completed intensive curriculum covering React, Node.js, databases, and modern deployment workflows.",
+    degree: "Bachelor of Arts Honours in Computer Science",
+    school: "York University",
+    period: "2023 – 2028",
+    details:
+      "Focused on software engineering, algorithms, and distributed systems. Dean's list achievement.",
   },
 ];
 
@@ -82,16 +87,28 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
-function SectionTitle({ icon, label }: { icon: React.ReactNode; label: string }) {
+function SectionTitle({
+  icon,
+  label,
+}: {
+  icon: React.ReactNode;
+  label: string;
+}) {
   return (
     <div className="flex items-center gap-3 mb-6">
       <div className="w-8 h-8 rounded-lg bg-primary/15 border border-primary/25 flex items-center justify-center shrink-0">
         {icon}
       </div>
-      <h3 className="text-xs font-mono font-bold uppercase tracking-[0.15em] text-primary">{label}</h3>
+      <h3 className="text-xs font-mono font-bold uppercase tracking-[0.15em] text-primary">
+        {label}
+      </h3>
       <div className="flex-1 h-px bg-border/60 ml-1" />
     </div>
   );
@@ -113,8 +130,12 @@ export default function Resume() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16"
         >
           <div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">Resume</h2>
-            <p className="text-muted-foreground text-lg">A snapshot of my background, skills, and experience.</p>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-3">
+              Resume
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              A snapshot of my background, skills, and experience.
+            </p>
           </div>
           <a
             href="/resume.pdf"
@@ -129,7 +150,6 @@ export default function Resume() {
 
         {/* Two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-12 items-start">
-
           {/* Left column — sidebar */}
           <motion.div
             variants={containerVariants}
@@ -144,11 +164,19 @@ export default function Resume() {
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 space-y-4"
             >
               <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-primary/30 mb-2">
-                <img src="/avatar.png" alt="Ibrahim Mammadov" className="w-full h-full object-cover" />
+                <img
+                  src="/avatar.png"
+                  alt="Ibrahim Mammadov"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
-                <h4 className="text-xl font-display font-bold">Ibrahim Mammadov</h4>
-                <p className="text-sm text-primary font-mono mt-0.5">Full-Stack Developer</p>
+                <h4 className="text-xl font-display font-bold">
+                  Ibrahim Mammadov
+                </h4>
+                <p className="text-sm text-primary font-mono mt-0.5">
+                  Full-Stack Developer
+                </p>
               </div>
               <div className="space-y-2.5 pt-2 border-t border-border/60">
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
@@ -157,7 +185,7 @@ export default function Resume() {
                 </div>
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
                   <MapPin className="w-3.5 h-3.5 text-primary/70 shrink-0" />
-                  <span>Azerbaijan</span>
+                  <span>Canada</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
                   <Globe className="w-3.5 h-3.5 text-primary/70 shrink-0" />
@@ -167,32 +195,59 @@ export default function Resume() {
             </motion.div>
 
             {/* Education */}
-            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
-              <SectionTitle icon={<GraduationCap className="w-4 h-4 text-primary" />} label="Education" />
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
+            >
+              <SectionTitle
+                icon={<GraduationCap className="w-4 h-4 text-primary" />}
+                label="Education"
+              />
               <div className="space-y-5">
                 {education.map((edu, i) => (
-                  <div key={i} className={i > 0 ? "pt-5 border-t border-border/50" : ""}>
-                    <p className="font-semibold text-foreground text-sm leading-snug mb-1">{edu.degree}</p>
-                    <p className="text-xs font-mono text-primary mb-1">{edu.school}</p>
-                    <p className="text-xs text-muted-foreground font-mono mb-2">{edu.period}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{edu.details}</p>
+                  <div
+                    key={i}
+                    className={i > 0 ? "pt-5 border-t border-border/50" : ""}
+                  >
+                    <p className="font-semibold text-foreground text-sm leading-snug mb-1">
+                      {edu.degree}
+                    </p>
+                    <p className="text-xs font-mono text-primary mb-1">
+                      {edu.school}
+                    </p>
+                    <p className="text-xs text-muted-foreground font-mono mb-2">
+                      {edu.period}
+                    </p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {edu.details}
+                    </p>
                   </div>
                 ))}
               </div>
             </motion.div>
 
             {/* Awards & Diploma */}
-            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
-              <SectionTitle icon={<Trophy className="w-4 h-4 text-primary" />} label="Awards & Achievements" />
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
+            >
+              <SectionTitle
+                icon={<Trophy className="w-4 h-4 text-primary" />}
+                label="Awards & Achievements"
+              />
               <div className="space-y-5">
                 {/* University Awards */}
                 <div>
-                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-secondary mb-3">University</p>
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-secondary mb-3">
+                    University
+                  </p>
                   <ul className="space-y-2">
                     {universityAwards.map((award, i) => (
                       <li key={i} className="flex gap-2.5 items-start">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary/60 shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-relaxed">{award}</span>
+                        <span className="text-xs text-muted-foreground leading-relaxed">
+                          {award}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -200,12 +255,16 @@ export default function Resume() {
 
                 {/* High School Awards */}
                 <div className="pt-4 border-t border-border/50">
-                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-primary mb-3">High School</p>
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-primary mb-3">
+                    High School
+                  </p>
                   <ul className="space-y-2">
                     {highSchoolAwards.map((award, i) => (
                       <li key={i} className="flex gap-2.5 items-start">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-relaxed">{award}</span>
+                        <span className="text-xs text-muted-foreground leading-relaxed">
+                          {award}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -213,7 +272,9 @@ export default function Resume() {
 
                 {/* Ontario Secondary School Diploma */}
                 <div className="pt-4 border-t border-border/50">
-                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-3">Ontario Secondary School Diploma</p>
+                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-3">
+                    Ontario Secondary School Diploma
+                  </p>
                   {/* Replace /diploma.jpg with your actual diploma image */}
                   <div className="relative rounded-xl overflow-hidden border border-border/60 bg-muted/30 aspect-[4/3] group cursor-pointer">
                     <img
@@ -221,14 +282,20 @@ export default function Resume() {
                       alt="Ontario Secondary School Diploma"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.display = 'none';
-                        (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                        (e.currentTarget as HTMLImageElement).style.display =
+                          "none";
+                        (
+                          e.currentTarget.nextElementSibling as HTMLElement
+                        ).style.display = "flex";
                       }}
                     />
                     {/* Shown only when image is missing */}
                     <div className="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-muted-foreground/50">
                       <ImageIcon className="w-8 h-8" />
-                      <p className="text-xs font-mono text-center px-4">Upload diploma.jpg to public folder to display your diploma</p>
+                      <p className="text-xs font-mono text-center px-4">
+                        Upload diploma.jpg to public folder to display your
+                        diploma
+                      </p>
                     </div>
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
@@ -238,21 +305,35 @@ export default function Resume() {
             </motion.div>
 
             {/* Skill proficiency */}
-            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6">
-              <SectionTitle icon={<Zap className="w-4 h-4 text-primary" />} label="Proficiency" />
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
+            >
+              <SectionTitle
+                icon={<Zap className="w-4 h-4 text-primary" />}
+                label="Proficiency"
+              />
               <div className="space-y-4">
                 {skills.map((skill, i) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-1.5">
-                      <span className="text-xs font-mono text-foreground">{skill.name}</span>
-                      <span className="text-xs font-mono text-primary">{skill.level}%</span>
+                      <span className="text-xs font-mono text-foreground">
+                        {skill.name}
+                      </span>
+                      <span className="text-xs font-mono text-primary">
+                        {skill.level}%
+                      </span>
                     </div>
                     <div className="h-1.5 rounded-full bg-muted overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.9, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{
+                          duration: 0.9,
+                          delay: i * 0.06,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
                         className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
                       />
                     </div>
@@ -269,8 +350,14 @@ export default function Resume() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.div variants={itemVariants} className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 lg:p-8">
-              <SectionTitle icon={<Briefcase className="w-4 h-4 text-primary" />} label="Work Experience" />
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 lg:p-8"
+            >
+              <SectionTitle
+                icon={<Briefcase className="w-4 h-4 text-primary" />}
+                label="Work Experience"
+              />
 
               <div className="relative border-l border-primary/20 ml-3 space-y-10">
                 {experience.map((exp, i) => (
@@ -284,11 +371,17 @@ export default function Resume() {
 
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
                       <div>
-                        <h4 className="text-lg font-display font-bold text-foreground leading-tight">{exp.role}</h4>
-                        <p className="text-sm text-muted-foreground">{exp.company}</p>
+                        <h4 className="text-lg font-display font-bold text-foreground leading-tight">
+                          {exp.role}
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {exp.company}
+                        </p>
                       </div>
                       <div className="flex flex-col sm:items-end gap-1 shrink-0">
-                        <span className="text-xs font-mono text-primary">{exp.period}</span>
+                        <span className="text-xs font-mono text-primary">
+                          {exp.period}
+                        </span>
                         <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary/80 w-fit">
                           {exp.type}
                         </span>
@@ -297,7 +390,10 @@ export default function Resume() {
 
                     <ul className="space-y-2">
                       {exp.bullets.map((bullet, j) => (
-                        <li key={j} className="flex gap-2.5 text-sm text-muted-foreground leading-relaxed">
+                        <li
+                          key={j}
+                          className="flex gap-2.5 text-sm text-muted-foreground leading-relaxed"
+                        >
                           <span className="mt-2 w-1 h-1 rounded-full bg-primary/60 shrink-0" />
                           {bullet}
                         </li>
@@ -315,8 +411,12 @@ export default function Resume() {
                   { label: "Happy Clients", value: "10+" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <div className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">{stat.value}</div>
-                    <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+                    <div className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
