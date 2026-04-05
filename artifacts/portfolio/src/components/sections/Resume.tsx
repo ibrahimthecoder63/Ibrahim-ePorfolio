@@ -29,8 +29,8 @@ const universityAwards = [
 
 const highSchoolAwards = [
   "Ontario Scholar Award",
-  "Academic Achievement in Computer Science",
-  "Honour Roll — All Semesters",
+  "Grade 12 TV Production Award",
+  "Grade 12 Family Studies Award",
 ];
 
 const experience = [
@@ -181,11 +181,11 @@ export default function Resume() {
               <div className="space-y-2.5 pt-2 border-t border-border/60">
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
                   <Mail className="w-3.5 h-3.5 text-primary/70 shrink-0" />
-                  <span>ibrahim@example.com</span>
+                  <span>ibrahim.mammad63@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
                   <MapPin className="w-3.5 h-3.5 text-primary/70 shrink-0" />
-                  <span>Canada</span>
+                  <span>Toronto, ON</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-sm text-muted-foreground">
                   <Globe className="w-3.5 h-3.5 text-primary/70 shrink-0" />
