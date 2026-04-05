@@ -1,7 +1,45 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight, Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const typedPhrases = ["Computer Science Student", "Front-End Developer", "Problem Solver"];
+
+function useTypewriter(phrases: string[], speed = 75, deleteSpeed = 38, pauseTime = 2200) {
+  const [displayed, setDisplayed] = useState("");
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = phrases[phraseIndex];
+
+    if (!isDeleting && displayed === current) {
+      const t = setTimeout(() => setIsDeleting(true), pauseTime);
+      return () => clearTimeout(t);
+    }
+
+    if (isDeleting && displayed === "") {
+      setIsDeleting(false);
+      setPhraseIndex((i) => (i + 1) % phrases.length);
+      return;
+    }
+
+    const t = setTimeout(() => {
+      setDisplayed(
+        isDeleting
+          ? displayed.slice(0, -1)
+          : current.slice(0, displayed.length + 1)
+      );
+    }, isDeleting ? deleteSpeed : speed);
+
+    return () => clearTimeout(t);
+  }, [displayed, isDeleting, phraseIndex, phrases, speed, deleteSpeed, pauseTime]);
+
+  return displayed;
+}
 
 export default function Hero() {
+  const typed = useTypewriter(typedPhrases);
+
   return (
     <section
       id="top"
@@ -53,7 +91,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-5"
           >
             Ibrahim{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary">
@@ -61,12 +99,28 @@ export default function Hero() {
             </span>
           </motion.h1>
 
+          {/* Typing animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center gap-2 mb-8 text-xl md:text-2xl font-mono font-medium text-muted-foreground min-h-[2rem]"
+          >
+            <span className="text-primary/60 select-none">&gt;</span>
+            <span className="text-foreground/80">{typed}</span>
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
+              className="inline-block w-[2px] h-[1.2em] bg-primary ml-0.5 translate-y-[1px]"
+            />
+          </motion.div>
+
           {/* Subheading */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl leading-relaxed mb-10"
+            transition={{ duration: 0.8, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
+            className="text-lg text-muted-foreground font-light max-w-xl leading-relaxed mb-10"
           >
             Just a young programmer aspiring to do great things
           </motion.p>
@@ -75,7 +129,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.44, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.52, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-wrap items-center gap-4"
           >
             <a

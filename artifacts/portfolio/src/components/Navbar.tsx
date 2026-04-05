@@ -41,10 +41,13 @@ export default function Navbar() {
           <a
             href="#top"
             data-testid="link-logo"
-            className="relative group text-xl font-display font-black tracking-tight"
+            className="relative group text-lg font-black tracking-widest"
+            style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">IM</span>
-            <span className="text-foreground">.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              IM
+            </span>
+            <span className="text-foreground/80 text-sm align-super ml-0.5">'s Portfolio</span>
             <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
           </a>
 
@@ -77,7 +80,11 @@ export default function Navbar() {
               aria-label="Toggle menu"
               data-testid="button-mobile-menu"
             >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </button>
           </div>
         </div>

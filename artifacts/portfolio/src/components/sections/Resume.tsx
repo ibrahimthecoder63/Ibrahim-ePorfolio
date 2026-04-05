@@ -244,8 +244,8 @@ export default function Resume() {
                   <ul className="space-y-2">
                     {universityAwards.map((award, i) => (
                       <li key={i} className="flex gap-2.5 items-start">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-secondary/60 shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-relaxed">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-secondary/60 shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">
                           {award}
                         </span>
                       </li>
@@ -261,8 +261,8 @@ export default function Resume() {
                   <ul className="space-y-2">
                     {highSchoolAwards.map((award, i) => (
                       <li key={i} className="flex gap-2.5 items-start">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-relaxed">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">
                           {award}
                         </span>
                       </li>
