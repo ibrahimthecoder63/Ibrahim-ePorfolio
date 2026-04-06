@@ -3,12 +3,14 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Demo Tutoring Website",
+    title: "Math Tutoring Platform",
     description:
-      "A comprehensive analytics dashboard with real-time data visualization, dark mode support, and advanced filtering capabilities. Built to handle complex datasets with a clean, intuitive interface.",
+      "A full-stack tutoring website built to connect students who need math help with a real tutor. Features an integrated session booking system and a contact form for inquiries — allowing interested students to reach out or reserve a slot directly. Built from scratch with server-side form handling in PHP, this was my first project that solved a real problem for real users rather than just serving as a coding exercise.",
+    learned:
+      "Building this taught me how to handle server-side form logic, structure a multi-page site around a user's goal, and think about the experience from the visitor's perspective — not just the developer's.",
     image: "/project-1.png",
     tags: ["HTML", "CSS", "JavaScript", "PHP"],
-    links: { live: "https://demo-tutoring-website.replit.app/" },
+    links: { github: "#", live: "https://demo-tutoring-website.replit.app/" },
   },
 ];
 
@@ -58,7 +60,7 @@ export default function Projects() {
                 />
               </div>
 
-              <div className="w-full lg:w-2/5 space-y-6">
+              <div className="w-full lg:w-2/5 space-y-5">
                 <div className="flex gap-3 flex-wrap">
                   {project.tags.map((tag) => (
                     <span
@@ -75,10 +77,23 @@ export default function Projects() {
                 <p className="text-muted-foreground text-lg leading-relaxed font-light">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 pt-4">
-                    {/* <Github className="w-4 h-4" /> Source */}
+                <div className="border-l-2 border-primary/40 pl-4">
+                  <p className="text-sm text-muted-foreground/70 italic leading-relaxed">
+                    <span className="text-primary/70 font-mono text-xs uppercase tracking-widest not-italic block mb-1">What I learned</span>
+                    {project.learned}
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 pt-2">
+                  {/* <a
+                    href={project.links.github}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-card hover:bg-muted border border-border transition-colors text-sm font-medium"
+                  >
+                    <Github className="w-4 h-4" /> Source
+                  </a> */}
                   <a
                     href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
                   >
                     <ExternalLink className="w-4 h-4" /> Live Demo
