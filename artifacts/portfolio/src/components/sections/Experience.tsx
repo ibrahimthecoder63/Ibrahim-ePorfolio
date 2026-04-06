@@ -60,7 +60,8 @@ export default function Experience() {
             Journey
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl">
-            The roles and experiences that have shaped how I think, build, and communicate.
+            The roles and experiences that have shaped how I think, build, and
+            communicate.
           </p>
         </motion.div>
 
@@ -77,7 +78,10 @@ export default function Experience() {
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-1">
-                <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Audiowide', sans-serif" }}>
+                <h3
+                  className="text-xl font-bold text-foreground"
+                  style={{ fontFamily: "'Audiowide', sans-serif" }}
+                >
                   {exp.role}
                 </h3>
                 <span className="text-sm font-mono text-primary mt-1 md:mt-0">
@@ -94,7 +98,10 @@ export default function Experience() {
               </div>
               <ul className="space-y-2.5 mb-5">
                 {exp.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed">
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed"
+                  >
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
                     <span>{bullet}</span>
                   </li>
@@ -102,7 +109,9 @@ export default function Experience() {
               </ul>
               <div className="border-l-2 border-primary/40 pl-4">
                 <p className="text-sm text-muted-foreground/70 italic leading-relaxed">
-                  <span className="text-primary/70 font-mono text-xs uppercase tracking-widest not-italic block mb-1">Takeaway</span>
+                  <span className="text-primary/70 font-mono text-xs uppercase tracking-widest not-italic block mb-1">
+                    Takeaway
+                  </span>
                   {exp.takeaway}
                 </p>
               </div>
