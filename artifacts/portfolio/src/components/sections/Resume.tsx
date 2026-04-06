@@ -201,7 +201,7 @@ export default function Resume() {
                   Ibrahim Mammadov
                 </h4>
                 <p className="text-sm text-primary font-mono mt-0.5">
-                  Full-Stack Developer
+                  Front-End Developer
                 </p>
               </div>
               <div className="space-y-2.5 pt-2 border-t border-border/60">
