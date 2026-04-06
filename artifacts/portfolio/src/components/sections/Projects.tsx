@@ -75,17 +75,11 @@ export default function Projects() {
                 <p className="text-muted-foreground text-lg leading-relaxed font-light">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 pt-2">
-                  {/* <a
-                    href={project.links.github}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-card hover:bg-muted border border-border transition-colors text-sm font-medium"
-                  >
-                    <Github className="w-4 h-4" /> Source
-                  </a> */}
+                <div className="flex items-center gap-4 pt-4">
+                    {/* <Github className="w-4 h-4" /> Source */}
+                  </a>
                   <a
                     href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
                   >
                     <ExternalLink className="w-4 h-4" /> Live Demo
