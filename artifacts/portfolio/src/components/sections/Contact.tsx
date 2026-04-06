@@ -29,7 +29,10 @@ export default function Contact() {
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({ name, email, message }),
       });
       const data = (await res.json()) as { success: boolean; error?: string };
@@ -43,7 +46,9 @@ export default function Contact() {
       }
     } catch (err: unknown) {
       setErrorMsg(
-        err instanceof Error ? err.message : "Something went wrong. Please try again.",
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
       );
       setStatus("error");
     }
@@ -53,10 +58,12 @@ export default function Contact() {
     "w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all duration-200";
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-card/30 border-t border-border/50">
+    <section
+      id="contact"
+      className="py-24 lg:py-32 bg-card/30 border-t border-border/50"
+    >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-
           {/* Left — info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +77,9 @@ export default function Contact() {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground mb-10 font-light max-w-md">
-              I'm currently open for new opportunities. Whether you have a project in mind or just want to chat about tech, feel free to reach out.
+              I'm currently open for new opportunities. Whether you have a
+              project in mind or just want to chat about tech, feel free to
+              reach out.
             </p>
 
             <div className="space-y-6">
@@ -81,7 +90,9 @@ export default function Contact() {
                 <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-mono text-sm">ibrahim.mammad63@gmail.com</span>
+                <span className="font-mono text-sm">
+                  ibrahim.mammad63@gmail.com
+                </span>
               </a>
               <div className="flex items-center gap-4 text-muted-foreground">
                 <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center">
@@ -93,8 +104,11 @@ export default function Contact() {
 
             <div className="mt-12 flex gap-4">
               {[
-                { Icon: Github, href: "#" },
-                { Icon: Linkedin, href: "#" },
+                { Icon: Github, href: "https://github.com/ibrahimthecoder63/" },
+                {
+                  Icon: Linkedin,
+                  href: "https://www.linkedin.com/in/ibrahim-mammadov-28873b3b8/",
+                },
                 { Icon: Phone, href: "tel:+16476794828" },
               ].map(({ Icon, href }, i) => (
                 <a
@@ -126,9 +140,12 @@ export default function Contact() {
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-display font-bold mb-2">Message Sent!</h3>
+                  <h3 className="text-xl font-display font-bold mb-2">
+                    Message Sent!
+                  </h3>
                   <p className="text-muted-foreground text-sm max-w-xs">
-                    Thanks for reaching out. I'll get back to you as soon as possible.
+                    Thanks for reaching out. I'll get back to you as soon as
+                    possible.
                   </p>
                 </div>
                 <button
@@ -141,7 +158,10 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest">
+                  <label
+                    htmlFor="name"
+                    className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest"
+                  >
                     Name
                   </label>
                   <input
@@ -157,7 +177,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest">
+                  <label
+                    htmlFor="email"
+                    className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest"
+                  >
                     Email
                   </label>
                   <input
@@ -173,7 +196,10 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest">
+                  <label
+                    htmlFor="message"
+                    className="text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest"
+                  >
                     Message
                   </label>
                   <textarea

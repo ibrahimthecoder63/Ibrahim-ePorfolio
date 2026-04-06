@@ -35,7 +35,7 @@ const experiences = [
     role: "Deputy Returning Officer",
     company: "Elections Canada",
     logo: "/elections-logo.png",
-    logoClass: "h-10",
+    logoClass: "h-8",
     period: "Apr 2025",
     bullets: [
       "Managed a federal polling station during the 2025 Canadian federal election, overseeing ballot processing and voter verification",
