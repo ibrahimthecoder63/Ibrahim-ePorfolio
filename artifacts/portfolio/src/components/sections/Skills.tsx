@@ -65,7 +65,7 @@ export default function Skills() {
               <h3 className="text-xl font-bold mb-2 font-display">
                 {category.title}
               </h3>
-              <p className="text-xs text-muted-foreground/60 font-light leading-snug mb-5">
+              <p className="text-sm text-muted-foreground/60 font-light leading-snug mb-5">
                 {category.context}
               </p>
               <ul className="space-y-3">

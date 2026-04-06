@@ -68,7 +68,7 @@ export default function Experience() {
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-1">
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground" style={{ fontFamily: "'Audiowide', sans-serif" }}>
                   {exp.role}
                 </h3>
                 <span className="text-sm font-mono text-primary mt-1 md:mt-0">
