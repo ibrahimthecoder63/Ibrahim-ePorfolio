@@ -81,18 +81,6 @@ const experience = [
     bullets: [
       "Build and maintain responsive web applications using Next.js (14+), React, and TypeScript",
       "Translate UI/UX designs into pixel-perfect, accessible interfaces using Tailwind CSS or styled-components",
-      "Another point...",
-    ],
-  },
-  {
-    role: "Programming Student",
-    company: "Self-Taught",
-    period: "2020 – 2022",
-    type: "Learning",
-    bullets: [
-      "Mastered computer science fundamentals: algorithms, data structures, design patterns",
-      "Built 20+ projects ranging from CLI tools to full-stack web applications",
-      "Participated in online hackathons and competitive programming challenges",
     ],
   },
 ];
@@ -164,7 +152,7 @@ export default function Resume() {
             </p>
           </div>
           <a
-            href="/resume.pdf"
+            href="/ibrahim resume.pdf"
             download
             className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 shrink-0"
             data-testid="button-download-resume"
@@ -191,7 +179,7 @@ export default function Resume() {
             >
               <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-primary/30 mb-2">
                 <img
-                  src="/avatar.png"
+                  src="/profile.jpg"
                   alt="Ibrahim Mammadov"
                   className="w-full h-full object-cover"
                 />

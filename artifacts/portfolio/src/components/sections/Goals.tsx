@@ -10,7 +10,7 @@ const goals = [
     dotColor: "bg-primary",
     items: [
       "Ship polished, production-quality work at Treepz and continue growing as a professional front-end developer",
-      "Deepen my understanding of Next.js App Router and advanced TypeScript patterns",
+      "Deepen my understanding of Next.js and TypeScript",
       "Build a full-stack personal project end-to-end — from database to deployed UI",
     ],
   },
@@ -52,7 +52,10 @@ const cardVariants = {
 
 export default function Goals() {
   return (
-    <section id="goals" className="py-24 lg:py-32 bg-card/20 border-y border-border/50 relative overflow-hidden">
+    <section
+      id="goals"
+      className="py-24 lg:py-32 bg-card/20 border-y border-border/50 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-secondary/3 pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -66,7 +69,8 @@ export default function Goals() {
             What I'm Working Towards
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Goals give direction to the work. Here's where I'm focused right now, and where I'm aiming to be.
+            Goals give direction to the work. Here's where I'm focused right
+            now, and where I'm aiming to be.
           </p>
         </motion.div>
 
@@ -84,7 +88,9 @@ export default function Goals() {
               className="bg-background rounded-2xl border border-border hover:border-primary/30 transition-colors duration-300 p-8 flex flex-col gap-6 group"
             >
               <div className="flex items-center justify-between">
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-mono font-medium ${goal.colorClass}`}>
+                <div
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-mono font-medium ${goal.colorClass}`}
+                >
                   {goal.icon}
                   {goal.horizon}
                 </div>
@@ -95,8 +101,13 @@ export default function Goals() {
 
               <ul className="space-y-4 flex-1">
                 {goal.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed text-sm">
-                    <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${goal.dotColor} opacity-70`} />
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed text-sm"
+                  >
+                    <span
+                      className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${goal.dotColor} opacity-70`}
+                    />
                     <span>{item}</span>
                   </li>
                 ))}
