@@ -4,6 +4,7 @@ const experiences = [
   {
     role: "Front-End Developer",
     company: "Treepz",
+    logo: "/treepz-logo.png",
     period: "Jan 2026 – Present",
     bullets: [
       "Building and shipping responsive landing pages and web applications for clients using React, Next.js, and Tailwind CSS",
@@ -17,6 +18,7 @@ const experiences = [
   {
     role: "Math Tutor",
     company: "TUTORAX",
+    logo: "/tutorax-logo.png",
     period: "Oct 2025 – Present",
     bullets: [
       "Tutoring high school and university students in calculus, algebra, and discrete mathematics",
@@ -30,6 +32,7 @@ const experiences = [
   {
     role: "Deputy Returning Officer",
     company: "Elections Canada",
+    logo: "/elections-logo.png",
     period: "Apr 2025",
     bullets: [
       "Managed a federal polling station during the 2025 Canadian federal election, overseeing ballot processing and voter verification",
@@ -81,9 +84,14 @@ export default function Experience() {
                   {exp.period}
                 </span>
               </div>
-              <h4 className="text-base text-muted-foreground/70 font-mono mb-4">
-                {exp.company}
-              </h4>
+              <div className="mb-4">
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="h-6 w-auto object-contain"
+                  style={{ filter: "brightness(0) invert(1)", opacity: 0.75 }}
+                />
+              </div>
               <ul className="space-y-2.5 mb-5">
                 {exp.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed">
