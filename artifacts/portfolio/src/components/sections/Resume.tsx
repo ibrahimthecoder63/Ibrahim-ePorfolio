@@ -60,9 +60,10 @@ const education = [
 ];
 
 const universityAwards = [
-  "Dean's List — Academic Excellence (2022, 2023)",
-  "Best Capstone Project Award",
-  "Computer Science Department Scholarship",
+  "Member of Dean's Honour Roll (Winter 2024)",
+  "Lassonde Entrance Scholarship",
+  "YorkU Automatic Entrance Scholarship",
+  "YorkU Automatic Entrance Scholarship 2",
 ];
 
 const highSchoolAwards = [
@@ -81,17 +82,6 @@ const experience = [
       "Build and maintain responsive web applications using Next.js (14+), React, and TypeScript",
       "Translate UI/UX designs into pixel-perfect, accessible interfaces using Tailwind CSS or styled-components",
       "Another point...",
-    ],
-  },
-  {
-    role: "Open Source Contributor",
-    company: "Various Projects",
-    period: "2022 – Present",
-    type: "Part-time",
-    bullets: [
-      "Contributed to 5+ open-source repositories with merged pull requests",
-      "Improved documentation and wrote test coverage for critical utilities",
-      "Collaborated with maintainers globally via async-first workflows",
     ],
   },
   {
