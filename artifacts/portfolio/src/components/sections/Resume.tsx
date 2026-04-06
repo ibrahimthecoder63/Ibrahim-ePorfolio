@@ -389,11 +389,8 @@ export default function Resume() {
               </div>
 
               {/* Highlights row */}
-              <div className="mt-10 pt-8 border-t border-border/60 grid grid-cols-3 gap-4">
-                {[
-                  { label: "Years Coding", value: "2+" },
-                  { label: "Project", value: "1" },
-                ].map((stat) => (
+              <div className="mt-10 pt-8 border-t border-border/60 grid grid-cols-1 gap-4">
+                {[{ label: "Years Coding", value: "2+" }].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
                       {stat.value}
