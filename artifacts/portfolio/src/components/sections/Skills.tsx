@@ -5,21 +5,25 @@ const skillCategories = [
   {
     title: "Front-End",
     icon: <Layout className="w-6 h-6 text-primary" />,
+    context: "Used daily in professional work and personal projects — my core toolkit",
     skills: ["HTML", "React", "TypeScript", "Tailwind CSS", "Next.js"],
   },
   {
     title: "Back-End",
     icon: <Database className="w-6 h-6 text-secondary" />,
+    context: "Foundational knowledge for building APIs and handling server-side logic",
     skills: ["Node.js", "JavaScript"],
   },
   {
     title: "Languages",
     icon: <Code2 className="w-6 h-6 text-accent" />,
+    context: "JS & TS professionally; Python, C & Java through university coursework",
     skills: ["JavaScript", "TypeScript", "Python", "C", "Java"],
   },
   {
     title: "Tools & DevOps",
     icon: <Terminal className="w-6 h-6 text-muted-foreground" />,
+    context: "The core of my everyday development workflow",
     skills: ["Git", "Linux", "Figma"],
   },
 ];
@@ -58,9 +62,12 @@ export default function Skills() {
               <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {category.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4 font-display">
+              <h3 className="text-xl font-bold mb-2 font-display">
                 {category.title}
               </h3>
+              <p className="text-xs text-muted-foreground/60 font-light leading-snug mb-5">
+                {category.context}
+              </p>
               <ul className="space-y-3">
                 {category.skills.map((skill) => (
                   <li

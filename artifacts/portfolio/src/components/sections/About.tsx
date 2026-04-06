@@ -16,7 +16,6 @@ export default function About() {
               <img src="/avatar.png" alt="Ibrahim Mammadov" className="w-full h-full object-cover opacity-80 mix-blend-luminosity" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay"></div>
             </div>
-            {/* decorative elements */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
           </motion.div>
@@ -28,26 +27,30 @@ export default function About() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Behind the Code</h2>
-            <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
+            <div className="space-y-5 text-lg text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm Ibrahim Mammadov, a young programmer with an insatiable curiosity for how things work under the hood. I specialize in building robust, visually engaging applications that live at the intersection of design and engineering.
+                I'm Ibrahim Mammadov — originally from Azerbaijan, now based in Ontario, Canada, and currently pursuing a Computer Science degree at York University. My programming journey started at 16 with a simple curiosity about how websites work, and has since grown into a genuine passion for front-end development.
               </p>
               <p>
-                My journey started with simple scripts and has evolved into full-stack development, where I strive to create scalable, user-centric software. I believe in writing code that not only works flawlessly but is clean, maintainable, and elegant.
+                I specialize in building clean, responsive interfaces using React, TypeScript, and modern CSS — experiences that feel intuitive to use and polished to look at. What makes me a stronger developer than my years alone suggest is my background in tutoring: teaching mathematics has sharpened how I communicate complex ideas, collaborate with others, and write code that people can actually understand.
               </p>
               <p>
-                When I'm not in my code editor, I'm constantly learning new frameworks, exploring system architecture, or seeking out the next big challenge to level up my skills.
+                I'm currently focused on growing as a front-end developer while deepening my software engineering fundamentals through my studies. I'm always chasing the next challenge — whether that's a tricky UI problem, a new framework, or a project that pushes me somewhere I haven't been before.
               </p>
             </div>
             
-            <div className="mt-10 grid grid-cols-2 gap-6">
+            <div className="mt-10 grid grid-cols-3 gap-6">
               <div>
                 <h4 className="text-4xl font-display font-bold text-foreground mb-2">3+</h4>
                 <p className="text-sm text-muted-foreground font-mono uppercase tracking-wider">Years Coding</p>
               </div>
               <div>
-                <h4 className="text-4xl font-display font-bold text-foreground mb-2">20+</h4>
+                <h4 className="text-4xl font-display font-bold text-foreground mb-2">10+</h4>
                 <p className="text-sm text-muted-foreground font-mono uppercase tracking-wider">Projects Built</p>
+              </div>
+              <div>
+                <h4 className="text-4xl font-display font-bold text-foreground mb-2">2</h4>
+                <p className="text-sm text-muted-foreground font-mono uppercase tracking-wider">Countries Lived</p>
               </div>
             </div>
           </motion.div>

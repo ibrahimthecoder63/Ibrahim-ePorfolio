@@ -4,23 +4,34 @@ const experiences = [
   {
     role: "Front-End Developer",
     company: "Treepz",
-    period: "Jan 2026 - Present",
-    description:
-      "Building custom web applications and landing pages for clients using React, Next.js, and Tailwind CSS. Focusing on performance, accessibility, and modern design principles to deliver exceptional user experiences.",
+    period: "Jan 2026 – Present",
+    bullets: [
+      "Building and shipping responsive landing pages and web applications for clients using React, Next.js, and Tailwind CSS",
+      "Translating Figma designs into pixel-accurate, accessible interfaces with a strong focus on mobile performance",
+      "Collaborating directly with clients to clarify requirements and iterating quickly based on real feedback",
+      "Structuring components for maintainability so projects stay clean and scalable as they grow",
+    ],
   },
   {
     role: "Math Tutor",
     company: "TUTORAX",
-    period: "Oct 2025 - Present",
-    description:
-      "Actively contributing to open-source libraries, fixing bugs, improving documentation, and learning from the global developer community. Passionate about giving back to the tools I use daily.",
+    period: "Oct 2025 – Present",
+    bullets: [
+      "Tutoring high school and university students in calculus, algebra, and discrete mathematics",
+      "Breaking down abstract concepts into clear, step-by-step explanations — a skill that directly improves how I write documentation and communicate technical decisions in code",
+      "Adapting my approach to each student's learning pace, building patience and strong communication under pressure",
+      "Maintaining consistent high ratings through structured, goal-oriented sessions with measurable student improvement",
+    ],
   },
   {
     role: "Deputy Returning Officer",
     company: "Elections Canada",
     period: "Apr 2025",
-    description:
-      "Mastered fundamental computer science concepts, algorithms, and data structures. Built foundational projects in Python and JavaScript to establish a strong technical baseline.",
+    bullets: [
+      "Managed a federal polling station during the 2025 Canadian federal election, overseeing ballot processing and voter verification",
+      "Led a small team of poll workers through a high-stakes, time-sensitive environment with strict procedural requirements and zero margin for error",
+      "Ensured full compliance with Elections Canada guidelines, demonstrating the level of attention to detail and accountability I bring to every project",
+    ],
   },
 ];
 
@@ -39,6 +50,9 @@ export default function Experience() {
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
             Journey
           </h2>
+          <p className="text-muted-foreground text-lg max-w-xl">
+            The roles and experiences that have shaped how I think, build, and communicate.
+          </p>
         </motion.div>
 
         <div className="max-w-4xl border-l border-border/50 ml-4 md:ml-8 space-y-12">
@@ -53,7 +67,7 @@ export default function Experience() {
             >
               <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
 
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-1">
                 <h3 className="text-xl font-bold text-foreground">
                   {exp.role}
                 </h3>
@@ -61,12 +75,17 @@ export default function Experience() {
                   {exp.period}
                 </span>
               </div>
-              <h4 className="text-lg text-muted-foreground mb-4">
+              <h4 className="text-base text-muted-foreground/70 font-mono mb-4">
                 {exp.company}
               </h4>
-              <p className="text-muted-foreground font-light leading-relaxed">
-                {exp.description}
-              </p>
+              <ul className="space-y-2.5">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
