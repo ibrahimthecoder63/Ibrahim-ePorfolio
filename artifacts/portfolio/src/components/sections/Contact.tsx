@@ -4,7 +4,7 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter,
+  Phone,
   Send,
   CheckCircle,
   AlertCircle,
@@ -92,10 +92,14 @@ export default function Contact() {
             </div>
 
             <div className="mt-12 flex gap-4">
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
+              {[
+                { Icon: Github, href: "#" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Phone, href: "tel:+16476794828" },
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground transition-all hover:-translate-y-1"
                 >
                   <Icon className="w-4 h-4" />
