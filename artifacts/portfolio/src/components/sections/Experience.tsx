@@ -5,6 +5,7 @@ const experiences = [
     role: "Front-End Developer",
     company: "Treepz",
     logo: "/treepz-logo.png",
+    logoClass: "h-6",
     period: "Jan 2026 – Present",
     bullets: [
       "Building and shipping responsive landing pages and web applications for clients using React, Next.js, and Tailwind CSS",
@@ -19,6 +20,7 @@ const experiences = [
     role: "Math Tutor",
     company: "TUTORAX",
     logo: "/tutorax-logo.png",
+    logoClass: "h-6",
     period: "Oct 2025 – Present",
     bullets: [
       "Tutoring high school and university students in calculus, algebra, and discrete mathematics",
@@ -33,6 +35,7 @@ const experiences = [
     role: "Deputy Returning Officer",
     company: "Elections Canada",
     logo: "/elections-logo.png",
+    logoClass: "h-10",
     period: "Apr 2025",
     bullets: [
       "Managed a federal polling station during the 2025 Canadian federal election, overseeing ballot processing and voter verification",
@@ -92,7 +95,7 @@ export default function Experience() {
                 <img
                   src={exp.logo}
                   alt={exp.company}
-                  className="h-6 w-auto object-contain"
+                  className={`${exp.logoClass} w-auto object-contain`}
                   style={{ filter: "brightness(0) invert(1)", opacity: 0.75 }}
                 />
               </div>
