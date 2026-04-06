@@ -29,7 +29,9 @@ function DiplomaImage() {
         {failed ? (
           <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground/50 py-10">
             <ImageIcon className="w-8 h-8" />
-            <p className="text-xs font-mono text-center px-4">Diploma image not found</p>
+            <p className="text-xs font-mono text-center px-4">
+              Diploma image not found
+            </p>
           </div>
         ) : (
           <div className="relative">
@@ -71,14 +73,14 @@ const highSchoolAwards = [
 
 const experience = [
   {
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    period: "2023 – Present",
+    role: "Front-End Developer",
+    company: "Co-op",
+    period: "2026 – Present",
     type: "Full-time",
     bullets: [
-      "Built and shipped 10+ production web apps for clients across various industries",
-      "Reduced client load times by an average of 40% through performance optimization",
-      "Maintained 100% client satisfaction rating on delivered projects",
+      "Build and maintain responsive web applications using Next.js (14+), React, and TypeScript",
+      "Translate UI/UX designs into pixel-perfect, accessible interfaces using Tailwind CSS or styled-components",
+      "Another point...",
     ],
   },
   {
@@ -106,14 +108,12 @@ const experience = [
 ];
 
 const skills = [
-  { name: "React / Next.js", level: 92 },
-  { name: "TypeScript", level: 88 },
-  { name: "Node.js / Express", level: 82 },
-  { name: "Tailwind CSS", level: 95 },
-  { name: "PostgreSQL", level: 75 },
-  { name: "Python", level: 78 },
-  { name: "Git & DevOps", level: 85 },
-  { name: "UI/UX Design", level: 70 },
+  { name: "React / Next.js", level: 60 },
+  { name: "TypeScript", level: 60 },
+  { name: "Tailwind CSS", level: 70 },
+  { name: "Java", level: 85 },
+  { name: "Python", level: 80 },
+  { name: "Git", level: 70 },
 ];
 
 const containerVariants = {
@@ -413,9 +413,8 @@ export default function Resume() {
               {/* Highlights row */}
               <div className="mt-10 pt-8 border-t border-border/60 grid grid-cols-3 gap-4">
                 {[
-                  { label: "Years Coding", value: "3+" },
-                  { label: "Projects Shipped", value: "20+" },
-                  { label: "Happy Clients", value: "10+" },
+                  { label: "Years Coding", value: "2+" },
+                  { label: "Project", value: "1" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">
