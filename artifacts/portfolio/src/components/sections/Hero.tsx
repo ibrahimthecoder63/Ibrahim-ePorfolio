@@ -1,28 +1,43 @@
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles, Github, Linkedin, Phone } from "lucide-react";
+import {
+  ArrowDownRight,
+  Sparkles,
+  Github,
+  Linkedin,
+  Phone,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
-const typedPhrases = ["Computer Science Student", "Front-End Developer", "Problem Solver"];
+const typedPhrases = [
+  "Computer Science Student",
+  "Front-End Developer",
+  "Problem Solver",
+];
 
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/ibrahim-mammadov",
+    href: "https://github.com/ibrahimthecoder63",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/ibrahim-mammadov",
+    href: "https://www.linkedin.com/in/ibrahim-mammadov-28873b3b8/",
     icon: Linkedin,
   },
   {
-    label: "+1 (000) 000-0000",
-    href: "tel:+10000000000",
+    label: "+1 (647) 679-4828",
+    href: "tel:+16476794828",
     icon: Phone,
   },
 ];
 
-function useTypewriter(phrases: string[], speed = 75, deleteSpeed = 38, pauseTime = 2200) {
+function useTypewriter(
+  phrases: string[],
+  speed = 75,
+  deleteSpeed = 38,
+  pauseTime = 2200,
+) {
   const [displayed, setDisplayed] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,16 +56,27 @@ function useTypewriter(phrases: string[], speed = 75, deleteSpeed = 38, pauseTim
       return;
     }
 
-    const t = setTimeout(() => {
-      setDisplayed(
-        isDeleting
-          ? displayed.slice(0, -1)
-          : current.slice(0, displayed.length + 1)
-      );
-    }, isDeleting ? deleteSpeed : speed);
+    const t = setTimeout(
+      () => {
+        setDisplayed(
+          isDeleting
+            ? displayed.slice(0, -1)
+            : current.slice(0, displayed.length + 1),
+        );
+      },
+      isDeleting ? deleteSpeed : speed,
+    );
 
     return () => clearTimeout(t);
-  }, [displayed, isDeleting, phraseIndex, phrases, speed, deleteSpeed, pauseTime]);
+  }, [
+    displayed,
+    isDeleting,
+    phraseIndex,
+    phrases,
+    speed,
+    deleteSpeed,
+    pauseTime,
+  ]);
 
   return displayed;
 }
@@ -82,14 +108,18 @@ export default function Hero() {
         />
         <motion.div
           animate={{ scale: [1, 1.08, 1], opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
           className="absolute -bottom-20 -right-20 w-[500px] h-[500px] rounded-full bg-secondary/20 blur-[100px]"
         />
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-4xl">
-
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -112,7 +142,9 @@ export default function Hero() {
             className="font-bold leading-[1.08] tracking-tight mb-5"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            <span className="text-4xl md:text-6xl lg:text-7xl text-foreground block">Ibrahim</span>
+            <span className="text-4xl md:text-6xl lg:text-7xl text-foreground block">
+              Ibrahim
+            </span>
             <span className="text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary block">
               Mammadov
             </span>
@@ -122,7 +154,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.32,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="flex items-center gap-2 mb-6 text-lg md:text-xl font-mono font-medium text-muted-foreground min-h-[1.8rem]"
           >
             <span className="text-primary/60 select-none">&gt;</span>
@@ -138,7 +174,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.42,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10"
           >
             <p className="text-base text-muted-foreground font-light leading-relaxed shrink-0">
@@ -169,7 +209,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.52, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.52,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="flex flex-wrap items-center gap-4"
           >
             <a
@@ -199,7 +243,9 @@ export default function Hero() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="w-px h-10 bg-gradient-to-b from-transparent via-muted-foreground/40 to-transparent"
             />
-            <span className="text-xs font-mono tracking-widest uppercase rotate-90 origin-left translate-x-5">Scroll</span>
+            <span className="text-xs font-mono tracking-widest uppercase rotate-90 origin-left translate-x-5">
+              Scroll
+            </span>
           </motion.div>
         </div>
       </div>

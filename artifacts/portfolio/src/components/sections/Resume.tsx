@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Download,
@@ -10,6 +11,41 @@ import {
   Trophy,
   ImageIcon,
 } from "lucide-react";
+
+function DiplomaImage() {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <div className="pt-4 border-t border-border/50">
+      <p className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-3">
+        Ontario Secondary School Diploma
+      </p>
+      <a
+        href="/diploma.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block rounded-xl overflow-hidden border border-border/60 bg-muted/20 group cursor-pointer"
+      >
+        {failed ? (
+          <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground/50 py-10">
+            <ImageIcon className="w-8 h-8" />
+            <p className="text-xs font-mono text-center px-4">Diploma image not found</p>
+          </div>
+        ) : (
+          <div className="relative">
+            <img
+              src="/diploma.png"
+              alt="Ontario Secondary School Diploma"
+              className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+              onError={() => setFailed(true)}
+            />
+            <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 pointer-events-none" />
+          </div>
+        )}
+      </a>
+    </div>
+  );
+}
 
 const education = [
   {
@@ -271,36 +307,7 @@ export default function Resume() {
                 </div>
 
                 {/* Ontario Secondary School Diploma */}
-                <div className="pt-4 border-t border-border/50">
-                  <p className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground mb-3">
-                    Ontario Secondary School Diploma
-                  </p>
-                  {/* Replace /diploma.jpg with your actual diploma image */}
-                  <div className="relative rounded-xl overflow-hidden border border-border/60 bg-muted/30 aspect-[4/3] group cursor-pointer">
-                    <img
-                      src="/diploma.jpg"
-                      alt="Ontario Secondary School Diploma"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).style.display =
-                          "none";
-                        (
-                          e.currentTarget.nextElementSibling as HTMLElement
-                        ).style.display = "flex";
-                      }}
-                    />
-                    {/* Shown only when image is missing */}
-                    <div className="absolute inset-0 hidden flex-col items-center justify-center gap-2 text-muted-foreground/50">
-                      <ImageIcon className="w-8 h-8" />
-                      <p className="text-xs font-mono text-center px-4">
-                        Upload diploma.jpg to public folder to display your
-                        diploma
-                      </p>
-                    </div>
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
-                  </div>
-                </div>
+                <DiplomaImage />
               </div>
             </motion.div>
 

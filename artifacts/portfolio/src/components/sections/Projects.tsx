@@ -3,12 +3,12 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Nexus Dashboard",
+    title: "Demo Tutoring Website",
     description:
       "A comprehensive analytics dashboard with real-time data visualization, dark mode support, and advanced filtering capabilities. Built to handle complex datasets with a clean, intuitive interface.",
     image: "/project-1.png",
-    tags: ["React", "TypeScript", "Tailwind", "Recharts"],
-    links: { github: "#", live: "#" },
+    tags: ["HTML", "CSS", "JavaScript", "PHP"],
+    links: { github: "#", live: "https://demo-tutoring-website.replit.app/" },
   },
 ];
 
