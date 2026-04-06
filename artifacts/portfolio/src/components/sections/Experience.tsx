@@ -11,6 +11,8 @@ const experiences = [
       "Collaborating directly with clients to clarify requirements and iterating quickly based on real feedback",
       "Structuring components for maintainability so projects stay clean and scalable as they grow",
     ],
+    takeaway:
+      "This role taught me what it means to ship production code — not just write it. Real client feedback cycles pushed me to value usability and clarity over theoretical elegance.",
   },
   {
     role: "Math Tutor",
@@ -22,6 +24,8 @@ const experiences = [
       "Adapting my approach to each student's learning pace, building patience and strong communication under pressure",
       "Maintaining consistent high ratings through structured, goal-oriented sessions with measurable student improvement",
     ],
+    takeaway:
+      "Teaching reinforced that the clearest explanation always wins — a principle I now apply directly to how I name variables, write comments, and structure my code for others to read.",
   },
   {
     role: "Deputy Returning Officer",
@@ -32,6 +36,8 @@ const experiences = [
       "Led a small team of poll workers through a high-stakes, time-sensitive environment with strict procedural requirements and zero margin for error",
       "Ensured full compliance with Elections Canada guidelines, demonstrating the level of attention to detail and accountability I bring to every project",
     ],
+    takeaway:
+      "Running a polling station showed me that systems only work when every person follows the process precisely — which deepened my appreciation for code quality, thorough testing, and clear documentation.",
   },
 ];
 
@@ -78,7 +84,7 @@ export default function Experience() {
               <h4 className="text-base text-muted-foreground/70 font-mono mb-4">
                 {exp.company}
               </h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2.5 mb-5">
                 {exp.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-3 text-muted-foreground font-light leading-relaxed">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
@@ -86,6 +92,12 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+              <div className="border-l-2 border-primary/40 pl-4">
+                <p className="text-sm text-muted-foreground/70 italic leading-relaxed">
+                  <span className="text-primary/70 font-mono text-xs uppercase tracking-widest not-italic block mb-1">Takeaway</span>
+                  {exp.takeaway}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
