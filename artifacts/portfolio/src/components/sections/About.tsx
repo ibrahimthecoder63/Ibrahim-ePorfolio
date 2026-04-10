@@ -125,7 +125,7 @@ export default function About() {
           className="mt-24"
         >
           <div
-            className="relative w-full aspect-video rounded-3xl overflow-hidden border border-border/50 bg-black group cursor-pointer"
+            className="relative w-full max-w-2xl mx-auto aspect-video rounded-3xl overflow-hidden border border-border/50 bg-black group cursor-pointer"
             onClick={togglePlay}
           >
             <video
