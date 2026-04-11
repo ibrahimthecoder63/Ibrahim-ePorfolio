@@ -33,11 +33,13 @@ export default function Projects() {
               capabilities in software development.
             </p>
           </div>
-          <span
-            title="Coming soon"
-            className="hidden md:inline-flex items-center gap-2 text-muted-foreground/40 font-mono text-sm uppercase tracking-wider cursor-not-allowed mt-6 md:mt-0 select-none"
-          >
-            View All Projects <ExternalLink className="w-4 h-4" />
+          <span className="hidden md:inline-flex flex-col items-end gap-1 mt-6 md:mt-0 select-none cursor-not-allowed">
+            <span className="inline-flex items-center gap-2 text-muted-foreground/40 font-mono text-sm uppercase tracking-wider">
+              View All Projects <ExternalLink className="w-4 h-4" />
+            </span>
+            <span className="text-xs font-mono text-muted-foreground/30 tracking-widest uppercase">
+              Coming soon
+            </span>
           </span>
         </motion.div>
 
