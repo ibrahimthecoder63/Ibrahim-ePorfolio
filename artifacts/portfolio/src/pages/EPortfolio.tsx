@@ -200,7 +200,7 @@ const portfolios: Portfolio[] = [
         reflection:
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
         critique:
-          "The values are reasonable but never grounded in a real experience — without a concrete example, they read as a list of admirable traits rather than a genuine reflection. The vision for stakeholders is too vague to mean anything, and the mention of technical diagrams at the end feels disconnected from the rest.",
+          "The written reflection lists good values — creativity, perseverance, patience — but never backs them up with a real example. It also describes the future as 'prosperous for all,' which is too broad to say anything meaningful. The reflection would be stronger if it tied each ideal to an actual experience rather than keeping it abstract.",
         url: "/Your Vision as an Engineer.pdf",
       },
       {
