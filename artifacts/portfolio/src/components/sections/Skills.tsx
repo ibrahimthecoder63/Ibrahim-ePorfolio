@@ -48,7 +48,7 @@ export default function Skills() {
             Technical Arsenal
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            The tools and technologies I use to bring ideas to life.
+            The tools and technologies I use to turn ideas into reality.
           </p>
         </motion.div>
 
