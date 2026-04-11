@@ -138,18 +138,18 @@ const portfolios: Portfolio[] = [
     icon: <BookOpen className="w-4 h-4" />,
     name: "Portfolio: Interests & Skills",
     introduction:
-      "This portfolio contains the results of my formal interest inventory and the SMART goals I developed from my undergraduate competency assessments. Together, they map out what I am naturally drawn to and the concrete targets I have set to grow toward it.",
+      "This portfolio contains my personal interests list and the SMART goals I developed from my undergraduate competency assessments. Together, they map out what I am naturally drawn to and the concrete targets I have set to grow toward it.",
     reflection:
       "Identifying my interests formally — rather than just acting on them — has made me more intentional about how I spend my time and energy. I now see skill-building as a deliberate practice, not something that just happens through proximity to work.",
     comments:
-      "The interest inventory reflects patterns I have noticed across every role and course I have taken. The SMART goals are reviewed regularly and updated as milestones are reached — they are meant to hold me accountable, not just look good on paper.",
+      "The interests list reflects patterns I have noticed across every role and course I have taken. The SMART goals are reviewed regularly and updated as milestones are reached — they are meant to hold me accountable, not just look good on paper.",
     documents: [
       {
         title: "Interests",
         type: "Assessment Results",
         date: "April 2026",
         introduction:
-          "Results from a structured interest inventory completed as part of career development coursework. Identifies primary interest areas: technical problem-solving, design, and education/teaching. Uploaded November 2023.",
+          "A personal interests list compiled as part of career development coursework. Identifies primary areas: technical problem-solving, design, and education/teaching. Uploaded November 2023.",
         reflection:
           "The results confirmed what I already suspected — but seeing it laid out formally was useful. The intersection of technical work and communication/teaching is exactly where I have found the most satisfaction, and this document gives that observation some structure.",
         bullets: [
