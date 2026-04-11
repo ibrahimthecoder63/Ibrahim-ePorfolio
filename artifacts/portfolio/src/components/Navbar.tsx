@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, BookMarked } from "lucide-react";
+import { Link, useLocation } from "wouter";
 
 const links = [
   { name: "About", href: "#about" },
@@ -15,6 +16,8 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [location] = useLocation();
+  const isJourneyPage = location === "/eportfolio";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -64,6 +67,26 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-3 right-3 h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </a>
             ))}
+
+            {/* My Journey link */}
+            <Link
+              href="/eportfolio"
+              className={`relative flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors duration-200 group ${
+                isJourneyPage
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <BookMarked className="w-3.5 h-3.5 shrink-0" />
+              My Journey
+              <span
+                className={`absolute bottom-0 left-3 right-3 h-px bg-primary transition-transform duration-300 origin-left ${
+                  isJourneyPage
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              />
+            </Link>
           </nav>
 
           {/* CTA + mobile toggle */}
@@ -112,6 +135,14 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <Link
+                href="/eportfolio"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              >
+                <BookMarked className="w-4 h-4" />
+                My Journey
+              </Link>
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
