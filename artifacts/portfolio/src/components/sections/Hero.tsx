@@ -230,23 +230,6 @@ export default function Hero() {
               Contact Me
             </a>
           </motion.div>
-
-          {/* Scroll hint */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="absolute bottom-10 left-6 lg:left-12 flex items-center gap-3 text-muted-foreground/50"
-          >
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-px h-10 bg-gradient-to-b from-transparent via-muted-foreground/40 to-transparent"
-            />
-            <span className="text-xs font-mono tracking-widest uppercase rotate-90 origin-left translate-x-5">
-              Scroll
-            </span>
-          </motion.div>
         </div>
       </div>
     </section>
