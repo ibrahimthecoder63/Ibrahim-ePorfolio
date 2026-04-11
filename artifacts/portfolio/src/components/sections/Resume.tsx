@@ -60,9 +60,9 @@ const education = [
 
 const universityAwards = [
   "Lassonde Entrance Scholarship (Fall 2023)",
-  "YorkU Automatic Entrance Scholarship (Fall 2023)",
+  "YorkU Automatic Entrance Scholarship 1 (Fall 2023)",
   "YorkU Automatic Entrance Scholarship 2 (Fall 2024)",
-  "Member of Dean's Honour Roll (Winter 2024)",
+  "Member of Dean's Honour Roll (Fall/Winter 2023-2024)",
 ];
 
 const highSchoolAwards = [
