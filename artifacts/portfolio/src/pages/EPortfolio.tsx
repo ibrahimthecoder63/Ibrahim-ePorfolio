@@ -187,9 +187,9 @@ const portfolios: Portfolio[] = [
     introduction:
       "This portfolio contains my written reflection on what kind of engineer I want to be and a structured work and lifestyle values assessment. Together they reveal not just what I believe, but what I actually prioritize when real choices have to be made.",
     reflection:
-      "Values clarification is not a one-time exercise — it is something that gets refined through experience. Every role I have held has tested my values in some way, and this portfolio captures how my understanding of them has deepened over time.",
+      "The vision essay says creativity and helping people are my ideals — but the values assessment shows salary and job security ranking above both. That gap is worth acknowledging. The one thing that connects both documents honestly is the note about faith providing work-life balance, which feels truer to what I actually want than the rankings alone suggest.",
     comments:
-      "The EQ reflection included here was informed by multiple real-world environments, not just a single assessment. I have tried to be honest rather than impressive — this portfolio is most useful to me when it reflects who I actually am, not who I want to appear to be.",
+      "The essay was easy to write because I could be aspirational. The assessment was harder because ranking things forces a real choice — and placing salary above helping people says something honest about where I am right now, even if it is not where I want to end up.",
     documents: [
       {
         title: "My Vision as an Engineer",
