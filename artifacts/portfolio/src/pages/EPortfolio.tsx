@@ -171,7 +171,7 @@ const portfolios: Portfolio[] = [
         type: "Goal Planning Document",
         date: "February 2026",
         introduction:
-          "Six SMART goals developed from 3 undergraduate competency assessments.",
+          "Six SMART goals developed from 3 undergraduate competency assessments. From a course assignment.",
         reflection:
           "Writing goals in SMART format changed how I think about progress. Vague ambitions do not create accountability. These goals do — and I check them regularly to stay honest about where I actually am versus where I want to be.",
         critique:
@@ -196,7 +196,7 @@ const portfolios: Portfolio[] = [
         type: "Written Reflection",
         date: "March 2026",
         introduction:
-          "A written reflection on how I learn best — through building, applying, and iterating — and the pedagogical principles I have developed through tutoring. From a course assignment. Uploaded October 2023.",
+          "A written reflection on how I learn best — through building, applying, and iterating — and the pedagogical principles I have developed through tutoring. From a course assignment.",
         reflection:
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
         critique:
@@ -468,7 +468,7 @@ export default function EPortfolio() {
                 ePortfolio
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
               {goal.title}
             </h1>
             <div className="flex items-center gap-3 mb-10">
