@@ -417,7 +417,7 @@ export default function EPortfolio() {
   }, []);
 
   const [openPortfolios, setOpenPortfolios] = useState<Set<string>>(
-    new Set(["dreams"]),
+    new Set(),
   );
 
   const toggle = (id: string) => {
