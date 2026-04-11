@@ -454,15 +454,25 @@ export default function EPortfolio() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-14"
           >
-            <p className="text-xs font-mono uppercase tracking-widest text-primary/60 mb-3">
-              Career Development · ePortfolio
-            </p>
-            <h1 className="text-3xl md:text-5xl font-display font-bold mb-5">
+            <div className="flex items-center gap-2 mb-5">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/25 bg-primary/8 text-xs font-mono uppercase tracking-widest text-primary/70">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary/60 animate-pulse" />
+                Career Development
+              </span>
+              <span className="text-muted-foreground/30 text-xs">·</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground/40">
+                ePortfolio
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
               {goal.title}
             </h1>
-            <p className="text-muted-foreground/50 font-mono text-sm mb-10">
-              {goal.subtitle}
-            </p>
+            <div className="flex items-center gap-3 mb-10">
+              <div className="h-px w-6 bg-primary/40" />
+              <p className="text-muted-foreground/50 font-mono text-sm tracking-wider uppercase">
+                {goal.subtitle}
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
               <div className="bg-card/40 border border-border/60 rounded-2xl p-6">
