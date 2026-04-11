@@ -140,7 +140,7 @@ const portfolios: Portfolio[] = [
     introduction:
       "This portfolio contains my personal interests list and the SMART goals I developed from my undergraduate competency assessments. Together, they map out what I am naturally drawn to and the concrete targets I have set to grow toward it.",
     reflection:
-      "Identifying my interests formally — rather than just acting on them — has made me more intentional about how I spend my time and energy. I now see skill-building as a deliberate practice, not something that just happens through proximity to work.",
+      "Writing out my interests made me realise how much of what I gravitate toward was already shaping my decisions — I just had not named it. Pairing that with SMART goals gave me a way to act on it deliberately rather than just drifting in the right general direction.",
     comments:
       "The interests list reflects patterns I have noticed across every role and course I have taken. The SMART goals are reviewed regularly and updated as milestones are reached — they are meant to hold me accountable, not just look good on paper.",
     documents: [
