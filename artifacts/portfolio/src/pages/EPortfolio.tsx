@@ -45,6 +45,7 @@ type PDFDoc = {
     points: string[];
   }[];
   url?: string;
+  critique?: string;
 };
 
 type Portfolio = {
@@ -101,6 +102,8 @@ const portfolios: Portfolio[] = [
           "A list outlining my long-term career goals. Written in April 2026 as a personal planning exercise and updated periodically.",
         reflection:
           "Breaking goals into Now, Next, and Later allows me to turn broad aspirations into a tangible plan for action — giving my career a clear direction to move in.",
+        critique:
+          "Looking back, some of these goals are still too vague to be truly actionable — 'build a full-stack project end-to-end' needs a deadline and a defined scope to hold real weight. The Now column is solid, but the Later column reads more like aspirations than goals. I need to revisit it with more specificity as I get closer to those timeframes.",
         timeframes: [
           {
             label: "Now",
@@ -171,6 +174,8 @@ const portfolios: Portfolio[] = [
           "Six SMART goals developed from 3 undergraduate competency assessments",
         reflection:
           "Writing goals in SMART format changed how I think about progress. Vague ambitions do not create accountability. These goals do — and I check them regularly to stay honest about where I actually am versus where I want to be.",
+        critique:
+          "A few of the six goals were written to satisfy the assignment format rather than to genuinely challenge me. On reflection, the strongest ones are the ones tied to real deadlines — those are the ones I actually track. The weaker ones need to be rewritten with harder targets and clearer measures of success.",
         url: "/SMART Goals Assessment.pdf",
       },
     ],
@@ -194,6 +199,8 @@ const portfolios: Portfolio[] = [
           "A written reflection on how I learn best — through building, applying, and iterating — and the pedagogical principles I have developed through tutoring. From a course assignment. Uploaded October 2023.",
         reflection:
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
+        critique:
+          "This essay was honest but safe — I described how I learn without really interrogating why that approach sometimes fails me. There are situations where I resist asking for help too long or move to building before I have thought things through. A stronger version of this essay would acknowledge those blind spots rather than only celebrating what works.",
         url: "/Your Vision as an Engineer.pdf",
       },
       {
@@ -204,6 +211,8 @@ const portfolios: Portfolio[] = [
           "Completed values perspective assessment identifying core professional values: craftsmanship, honesty, growth, and impact. Includes discussion question responses from the values clarification exercise.",
         reflection:
           "The most clarifying moment was ranking values against each other. When you have to choose between two things you care about, you learn what you actually prioritise. This exercise made explicit what I had been acting on implicitly.",
+        critique:
+          "The values I identified feel genuine, but the exercise surfaced a tension I did not fully address: I ranked craftsmanship highly, yet in practice I sometimes ship work I am not proud of under time pressure. That gap between stated values and actual behaviour is worth examining more honestly — the assessment captured what I aspire to, not always what I do.",
         url: "/Values Assessment.pdf",
       },
     ],
@@ -286,6 +295,16 @@ function PDFPlaceholder({ doc }: { doc: PDFDoc }) {
                   "{doc.reflection}"
                 </p>
               </div>
+              {doc.critique && (
+                <div className="bg-muted/20 border border-border/50 border-dashed rounded-lg p-4">
+                  <p className="text-xs font-mono uppercase tracking-widest text-orange-400/60 mb-2">
+                    Critique
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed italic">
+                    "{doc.critique}"
+                  </p>
+                </div>
+              )}
               {doc.timeframes ? (
                 <div className="grid grid-cols-3 gap-3">
                   {doc.timeframes.map((tf) => {
