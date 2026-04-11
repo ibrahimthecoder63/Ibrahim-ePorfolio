@@ -77,7 +77,7 @@ export default function Navbar() {
               }`}
             >
               <BookMarked className="w-3.5 h-3.5 shrink-0" />
-              My Journey
+              Self-Discovery
               <span
                 className={`absolute bottom-0 left-3 right-3 h-px bg-primary transition-transform duration-300 origin-left ${
                   isJourneyPage
@@ -140,7 +140,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
                 <BookMarked className="w-4 h-4" />
-                My Journey
+                Self-Discovery
               </Link>
               <a
                 href="#contact"
