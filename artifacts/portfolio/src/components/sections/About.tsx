@@ -79,8 +79,8 @@ export default function About() {
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm Ibrahim — from Azerbaijan, living in Ontario, and studying
-                Computer Science at York University. I got into coding at 16
+                I'm Ibrahim — based in Ontario and studying Computer Science
+                at York University. I got into coding at 16
                 just trying to understand how websites worked, and somewhere
                 along the way it stopped being a hobby and became what I want
                 to do.
