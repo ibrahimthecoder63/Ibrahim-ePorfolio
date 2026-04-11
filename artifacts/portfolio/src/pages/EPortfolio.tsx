@@ -138,7 +138,7 @@ const portfolios: Portfolio[] = [
     icon: <BookOpen className="w-4 h-4" />,
     name: "Portfolio: Interests & Skills",
     introduction:
-      "This portfolio will contain the results of my interest inventory, skills identification checklist, and the personal development goals I have built based on my undergraduate competency assessment. It documents both what I am drawn to and what I am actively developing.",
+      "This portfolio contains the results of my formal interest inventory and the SMART goals I developed from my undergraduate competency assessments. Together, they map out what I am naturally drawn to and the concrete targets I have set to grow toward it.",
     reflection:
       "Identifying my interests formally — rather than just acting on them — has made me more intentional about how I spend my time and energy. I now see skill-building as a deliberate practice, not something that just happens through proximity to work.",
     comments:
