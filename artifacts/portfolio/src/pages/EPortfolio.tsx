@@ -70,6 +70,19 @@ const portfolios: Portfolio[] = [
       "This portfolio is a living record. As my goals evolve and new milestones are reached, new documents and reflections will be added here. Each entry marks a point in the journey, not a final destination.",
     documents: [
       {
+        title: "Childhood Dreams",
+        type: "Personal Narrative",
+        date: "April 2026",
+        introduction:
+          "A short reflective piece on early experiences with computers and technology that shaped my interest in software development.",
+        reflection:
+          "Revisiting these early memories reminded me that the instinct to build and explore has always been there. This portfolio exists partly because of the kid who spent hours figuring out how programs worked — and I think that is worth documenting.",
+        bullets: [
+          "Fascinated by computers from a young age — more interested in how software was built than simply using it",
+          "Spent hours exploring programs, games, and tools, and imagining what I could create",
+        ],
+      },
+      {
         title: "Why This Major (Computer Science)?",
         type: "Written Statement",
         date: "April 2026",
@@ -116,20 +129,6 @@ const portfolios: Portfolio[] = [
               "Build something of my own that solves a problem I've lived through",
             ],
           },
-        ],
-      },
-      {
-        title: "Childhood Dreams — Early Influences Reflection",
-        type: "Personal Narrative",
-        date: "October 2023",
-        introduction:
-          "A short reflective piece on early experiences with computers and technology that shaped my interest in software development. Part of the initial self-assessment exercise. Uploaded October 2023.",
-        reflection:
-          "Revisiting these early memories reminded me that the instinct to build and explore has always been there. This portfolio exists partly because of the kid who spent hours figuring out how programs worked — and I think that is worth documenting.",
-        bullets: [
-          "Fascinated by computers from a young age — more interested in how software was built than simply using it",
-          "Spent hours exploring programs, games, and tools, and imagining what I could create",
-          "Chose Computer Science to merge technical creativity with real-world impact, a goal that has only sharpened over time",
         ],
       },
     ],
@@ -562,7 +561,7 @@ export default function EPortfolio() {
 
                           <div className="lg:col-span-3">
                             <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground/40 mb-4">
-                              Documents & Notes
+                              Contents
                             </p>
                             <div className="space-y-3">
                               {portfolio.documents.map((doc, i) => (
