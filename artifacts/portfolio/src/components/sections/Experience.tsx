@@ -13,7 +13,7 @@ const experiences = [
       "Structuring components for maintainability so projects stay clean and scalable as they grow",
     ],
     takeaway:
-      "Working with real clients changed how I think about code — what matters is whether it works for the person using it, not how clean it looks to the person who wrote it.",
+      "This role pushed me to think beyond the code itself — building for real users means the interface has to be clear and reliable, not just well-structured on the inside.",
   },
   {
     role: "Math Tutor",
