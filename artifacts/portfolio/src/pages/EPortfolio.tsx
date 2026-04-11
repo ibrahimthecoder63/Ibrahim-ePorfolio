@@ -146,7 +146,7 @@ const portfolios: Portfolio[] = [
     documents: [
       {
         title: "Interests List",
-        type: "Personal Interests List",
+        type: "Self-Reflection",
         date: "April 2026",
         introduction:
           "A personal interests list compiled as part of career development coursework. Identifies primary areas: technical problem-solving, design, and education/teaching. Uploaded November 2023.",
