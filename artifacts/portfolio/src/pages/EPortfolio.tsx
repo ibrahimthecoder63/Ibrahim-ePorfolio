@@ -188,21 +188,23 @@ const portfolios: Portfolio[] = [
     documents: [
       {
         title: "My Vision as an Engineer",
-        type: "Reflective Essay",
+        type: "Written Reflection",
         date: "MONTH 2026",
         introduction:
           "A written reflection on how I learn best — through building, applying, and iterating — and the pedagogical principles I have developed through tutoring. From a course assignment. Uploaded October 2023.",
         reflection:
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
+        url: "/Your Vision as an Engineer.pdf",
       },
       {
         title: "Values Perspective Assessment",
-        type: "Assessment Response",
-        date: "MONTH 2026",
+        type: "Self-Assessment Exercise",
+        date: "February 2026",
         introduction:
-          "Completed values perspective assessment identifying core professional values: craftsmanship, honesty, growth, and impact. Includes discussion question responses from the values clarification exercise. Uploaded November 2023.",
+          "Completed values perspective assessment identifying core professional values: craftsmanship, honesty, growth, and impact. Includes discussion question responses from the values clarification exercise.",
         reflection:
           "The most clarifying moment was ranking values against each other. When you have to choose between two things you care about, you learn what you actually prioritise. This exercise made explicit what I had been acting on implicitly.",
+        url: "/Values Assessment.pdf",
       },
     ],
   },
