@@ -41,7 +41,7 @@ const experiences = [
       "Ensured full compliance with Elections Canada guidelines, demonstrating the level of attention to detail and accountability I bring to every project",
     ],
     takeaway:
-      "Running a polling station showed me that systems only work when every person follows the process precisely — which deepened my appreciation for code quality, thorough testing, and clear documentation.",
+      "Managing a polling station under strict federal guidelines taught me how to stay composed under pressure and execute a process with no room for error — a mindset I carry into everything I do.",
   },
 ];
 

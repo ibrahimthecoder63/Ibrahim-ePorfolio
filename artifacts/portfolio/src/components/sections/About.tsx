@@ -79,11 +79,10 @@ export default function About() {
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm Ibrahim — based in Ontario and studying Computer Science
-                at York University. I got into coding at 16
-                just trying to understand how websites worked, and somewhere
-                along the way it stopped being a hobby and became what I want
-                to do.
+                I'm Ibrahim — based in Toronto and studying Computer Science at
+                York University. I got into coding at 16 just trying to
+                understand how websites worked, and somewhere along the way it
+                stopped being a hobby and became what I want to do.
               </p>
               <p>
                 I build interfaces — clean, responsive, and actually pleasant to
@@ -94,8 +93,8 @@ export default function About() {
                 clearly, you probably understand it.
               </p>
               <p>
-                Outside of development, I'm into graphic design, basketball,
-                and soccer. Design keeps my eye sharp for detail and proportion.
+                Outside of development, I'm into graphic design, basketball, and
+                soccer. Design keeps my eye sharp for detail and proportion.
                 Sport keeps everything else in check. I try to bring the same
                 focus I have on the court or the pitch into the work — stay
                 patient, keep improving, and see things through.
