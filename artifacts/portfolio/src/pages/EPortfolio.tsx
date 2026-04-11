@@ -200,7 +200,7 @@ const portfolios: Portfolio[] = [
         reflection:
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
         critique:
-          "This essay was honest but safe — I described how I learn without really interrogating why that approach sometimes fails me. There are situations where I resist asking for help too long or move to building before I have thought things through. A stronger version of this essay would acknowledge those blind spots rather than only celebrating what works.",
+          "The values are reasonable but never grounded in a real experience — without a concrete example, they read as a list of admirable traits rather than a genuine reflection. The vision for stakeholders is too vague to mean anything, and the mention of technical diagrams at the end feels disconnected from the rest.",
         url: "/Your Vision as an Engineer.pdf",
       },
       {
