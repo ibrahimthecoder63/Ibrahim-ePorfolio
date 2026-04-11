@@ -128,7 +128,7 @@ export default function About() {
           >
             <video
               ref={videoRef}
-              src="/api/video/intro.mp4"
+              src="/intro.mp4"
               className="w-full h-full object-cover"
               onEnded={() => setPlaying(false)}
               playsInline
