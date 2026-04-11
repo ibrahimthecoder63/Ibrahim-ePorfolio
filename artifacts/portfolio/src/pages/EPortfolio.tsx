@@ -158,6 +158,9 @@ const portfolios: Portfolio[] = [
           "Tertiary interest: Education and communication — explaining complex ideas clearly, reinforced through tutoring",
           "Strong preference for roles that blend independent technical work with team collaboration",
           "High affinity for front-end development, where logic and visual design intersect directly",
+          "Graphic design — a strong interest in visual composition, typography, and creating aesthetically purposeful work",
+          "Basketball — a lifelong sport that has shaped how I think about teamwork, competition, and staying sharp under pressure",
+          "Soccer — another sport I follow and play, valued for the discipline and collective strategy it demands",
         ],
       },
       {
