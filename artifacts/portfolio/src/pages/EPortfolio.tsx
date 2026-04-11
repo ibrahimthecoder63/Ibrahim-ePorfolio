@@ -142,7 +142,7 @@ const portfolios: Portfolio[] = [
     reflection:
       "Identifying my interests formally — rather than just acting on them — has made me more intentional about how I spend my time and energy. I now see skill-building as a deliberate practice, not something that just happens through proximity to work.",
     comments:
-      "The SMART goals documented here are checked and updated regularly. Skills listed reflect what I have applied in professional or academic settings — not simply what I have been exposed to. This distinction matters for credibility.",
+      "The interest inventory reflects patterns I have noticed across every role and course I have taken. The SMART goals are reviewed regularly and updated as milestones are reached — they are meant to hold me accountable, not just look good on paper.",
     documents: [
       {
         title: "Interests",
