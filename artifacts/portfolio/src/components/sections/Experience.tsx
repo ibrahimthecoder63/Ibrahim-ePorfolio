@@ -13,7 +13,7 @@ const experiences = [
       "Structuring components for maintainability so projects stay clean and scalable as they grow",
     ],
     takeaway:
-      "This role pushed me to think beyond the code itself — building for real users means the interface has to be clear and reliable, not just well-structured on the inside.",
+      "This role taught me what it means to ship production code — not just write it. Building for real users means the interface has to be clear and reliable, not just well-structured on the inside.",
   },
   {
     role: "Math Tutor",
