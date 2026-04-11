@@ -10,11 +10,10 @@ const experiences = [
     bullets: [
       "Building and shipping responsive landing pages and web applications for clients using React, Next.js, and Tailwind CSS",
       "Translating Figma designs into pixel-accurate, accessible interfaces with a strong focus on mobile performance",
-      "Collaborating directly with clients to clarify requirements and iterating quickly based on real feedback",
       "Structuring components for maintainability so projects stay clean and scalable as they grow",
     ],
     takeaway:
-      "This role taught me what it means to ship production code — not just write it. Real client feedback cycles pushed me to value usability and clarity over theoretical elegance.",
+      "Working with real clients changed how I think about code — what matters is whether it works for the person using it, not how clean it looks to the person who wrote it.",
   },
   {
     role: "Math Tutor",
@@ -39,7 +38,6 @@ const experiences = [
     period: "Apr 2025",
     bullets: [
       "Managed a federal polling station during the 2025 Canadian federal election, overseeing ballot processing and voter verification",
-      "Led a small team of poll workers through a high-stakes, time-sensitive environment with strict procedural requirements and zero margin for error",
       "Ensured full compliance with Elections Canada guidelines, demonstrating the level of attention to detail and accountability I bring to every project",
     ],
     takeaway:
