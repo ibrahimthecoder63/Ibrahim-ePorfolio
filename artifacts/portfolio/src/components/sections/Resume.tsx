@@ -62,8 +62,8 @@ const education = [
 const universityAwards = [
   "Member of Dean's Honour Roll (Winter 2024)",
   "Lassonde Entrance Scholarship",
-  "YorkU Automatic Entrance Scholarship",
-  "YorkU Automatic Entrance Scholarship 2",
+  "YorkU Automatic Entrance Scholarship (Fall 2023)",
+  "YorkU Automatic Entrance Scholarship 2 ",
 ];
 
 const highSchoolAwards = [
@@ -76,7 +76,7 @@ const experience = [
   {
     role: "Front-End Developer",
     company: "Co-op",
-    period: "2026 – Present",
+    period: "Jan 2026 – Apr 2026",
     type: "Full-time",
     bullets: [
       "Build and maintain responsive web applications using Next.js (14+), React, and TypeScript",

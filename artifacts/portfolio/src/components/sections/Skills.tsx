@@ -5,19 +5,22 @@ const skillCategories = [
   {
     title: "Front-End",
     icon: <Layout className="w-6 h-6 text-primary" />,
-    context: "Used daily in professional work and personal projects — my core toolkit",
+    context:
+      "Used daily in professional work and personal projects — my core toolkit",
     skills: ["HTML", "React", "TypeScript", "Tailwind CSS", "Next.js"],
   },
   {
     title: "Back-End",
     icon: <Database className="w-6 h-6 text-secondary" />,
-    context: "Foundational knowledge for building APIs and handling server-side logic",
-    skills: ["Node.js", "JavaScript"],
+    context:
+      "Foundational knowledge for building APIs and handling server-side logic",
+    skills: ["PHP", "JavaScript"],
   },
   {
     title: "Languages",
     icon: <Code2 className="w-6 h-6 text-accent" />,
-    context: "JS & TS professionally; Python, C & Java through university coursework",
+    context:
+      "JS & TS professionally; Python, C & Java through university coursework",
     skills: ["JavaScript", "TypeScript", "Python", "C", "Java"],
   },
   {

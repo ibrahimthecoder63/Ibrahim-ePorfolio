@@ -6,7 +6,7 @@ const experiences = [
     company: "Treepz",
     logo: "/treepz-logo.png",
     logoClass: "h-6",
-    period: "Jan 2026 – Present",
+    period: "Jan 2026 – Apr 2026",
     bullets: [
       "Building and shipping responsive landing pages and web applications for clients using React, Next.js, and Tailwind CSS",
       "Translating Figma designs into pixel-accurate, accessible interfaces with a strong focus on mobile performance",
