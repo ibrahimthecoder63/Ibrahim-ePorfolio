@@ -145,8 +145,8 @@ const portfolios: Portfolio[] = [
       "The interests list reflects patterns I have noticed across every role and course I have taken. The SMART goals are reviewed regularly and updated as milestones are reached — they are meant to hold me accountable, not just look good on paper.",
     documents: [
       {
-        title: "Interests",
-        type: "Assessment Results",
+        title: "Interests List",
+        type: "Personal Interests List",
         date: "April 2026",
         introduction:
           "A personal interests list compiled as part of career development coursework. Identifies primary areas: technical problem-solving, design, and education/teaching. Uploaded November 2023.",
