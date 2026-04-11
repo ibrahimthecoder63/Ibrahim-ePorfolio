@@ -218,7 +218,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group flex items-center gap-2.5 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-base hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25"
+              className="group flex items-center gap-2.5 bg-white text-background px-8 py-4 rounded-full font-semibold text-base hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-lg shadow-black/20"
             >
               View Work
               <ArrowDownRight className="w-5 h-5 group-hover:rotate-[-45deg] transition-transform duration-300" />
