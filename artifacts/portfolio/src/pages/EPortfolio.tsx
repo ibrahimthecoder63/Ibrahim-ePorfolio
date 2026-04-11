@@ -468,7 +468,7 @@ export default function EPortfolio() {
                 ePortfolio
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
               {goal.title}
             </h1>
             <div className="flex items-center gap-3 mb-10">
