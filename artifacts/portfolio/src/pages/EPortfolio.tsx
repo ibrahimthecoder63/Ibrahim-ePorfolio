@@ -549,7 +549,7 @@ export default function EPortfolio() {
                     </h3>
                     <div className="flex items-center gap-3 ml-auto">
                       <span className="text-xs font-mono text-muted-foreground/40 hidden sm:block">
-                        {portfolio.documents.length} documents
+                        {portfolio.documents.length} contents
                       </span>
                       <ChevronDown
                         className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}

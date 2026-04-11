@@ -54,22 +54,21 @@ const education = [
     degree: "Bachelor of Arts Honours in Computer Science",
     school: "York University",
     period: "2023 – 2028",
-    details:
-      "Focused on software engineering, algorithms, and distributed systems. Dean's list achievement.",
+    details: "Focused on software development and algorithms.",
   },
 ];
 
 const universityAwards = [
-  "Member of Dean's Honour Roll (Winter 2024)",
-  "Lassonde Entrance Scholarship",
+  "Lassonde Entrance Scholarship (Fall 2023)",
   "YorkU Automatic Entrance Scholarship (Fall 2023)",
-  "YorkU Automatic Entrance Scholarship 2 ",
+  "YorkU Automatic Entrance Scholarship 2 (Fall 2024)",
+  "Member of Dean's Honour Roll (Winter 2024)",
 ];
 
 const highSchoolAwards = [
-  "Ontario Scholar Award",
   "Grade 12 TV Production Award",
   "Grade 12 Family Studies Award",
+  "Ontario Scholar Award",
 ];
 
 const experience = [
@@ -79,8 +78,8 @@ const experience = [
     period: "Jan 2026 – Apr 2026",
     type: "Full-time",
     bullets: [
-      "Build and maintain responsive web applications using Next.js (14+), React, and TypeScript",
-      "Translate UI/UX designs into pixel-perfect, accessible interfaces using Tailwind CSS or styled-components",
+      "Built and maintained responsive web applications using Next.js (14+), React, and TypeScript",
+      "Translated UI/UX designs into pixel-perfect, accessible interfaces using Tailwind CSS or styled-components",
     ],
   },
 ];
