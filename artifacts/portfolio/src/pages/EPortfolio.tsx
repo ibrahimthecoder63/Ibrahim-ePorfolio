@@ -185,16 +185,16 @@ const portfolios: Portfolio[] = [
     icon: <Users className="w-4 h-4" />,
     name: "Portfolio: Values & Personality",
     introduction:
-      "This portfolio will contain materials from my personal philosophy of learning, values clarification exercises, and EQ reflection. It documents who I am at a deeper level — how I think, what I stand for, and the emotional intelligence insights that have come from real professional experience.",
+      "This portfolio contains my written reflection on what kind of engineer I want to be and a structured work and lifestyle values assessment. Together they reveal not just what I believe, but what I actually prioritize when real choices have to be made.",
     reflection:
-      "Values clarification is not a one-time exercise — it is something that gets refined through experience. Every role I have held has tested my values in some way, and this portfolio captures how my understanding of them has deepened over time.",
+      "The most revealing part of this process was seeing where my stated values and my actual priorities lined up — and where they did not. Writing the vision essay was easy; the values assessment was harder, because ranking forces honesty in a way that free writing does not.",
     comments:
-      "The EQ reflection included here was informed by multiple real-world environments, not just a single assessment. I have tried to be honest rather than impressive — this portfolio is most useful to me when it reflects who I actually am, not who I want to appear to be.",
+      "The values assessment was useful because I had to choose between things I genuinely want, which surfaces tensions I would otherwise avoid thinking about. I tried to be honest in both documents rather than write what sounds impressive.",
     documents: [
       {
         title: "My Vision as an Engineer",
         type: "Written Reflection",
-        date: "MONTH 2026",
+        date: "March 2026",
         introduction:
           "A written reflection on how I learn best — through building, applying, and iterating — and the pedagogical principles I have developed through tutoring. From a course assignment. Uploaded October 2023.",
         reflection:
@@ -212,7 +212,7 @@ const portfolios: Portfolio[] = [
         reflection:
           "The most clarifying moment was ranking values against each other. When you have to choose between two things you care about, you learn what you actually prioritise. This exercise made explicit what I had been acting on implicitly.",
         critique:
-          "The values I identified feel genuine, but the exercise surfaced a tension I did not fully address: I ranked craftsmanship highly, yet in practice I sometimes ship work I am not proud of under time pressure. That gap between stated values and actual behaviour is worth examining more honestly — the assessment captured what I aspire to, not always what I do.",
+          "Three of the top five work values are about salary and security, which sits in tension with ranking 'Help people' at seven. The conflict between high pay and family time is real but barely explored, and answering 'not really' to missing values feels too quick — creativity and autonomy don't appear anywhere in the list but clearly matter.",
         url: "/Values Assessment.pdf",
       },
     ],
