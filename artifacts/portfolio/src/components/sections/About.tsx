@@ -79,27 +79,26 @@ export default function About() {
             </h2>
             <div className="space-y-5 text-lg text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm Ibrahim Mammadov — originally from Azerbaijan, now based in
-                Ontario, Canada, and currently pursuing a Computer Science
-                degree at York University. My programming journey started at 16
-                with a simple curiosity about how websites work, and has since
-                grown into a genuine passion for front-end development.
+                I'm Ibrahim — from Azerbaijan, living in Ontario, and studying
+                Computer Science at York University. I got into coding at 16
+                just trying to understand how websites worked, and somewhere
+                along the way it stopped being a hobby and became what I want
+                to do.
               </p>
               <p>
-                I specialize in building clean, responsive interfaces using
-                React, TypeScript, and modern CSS — experiences that feel
-                intuitive to use and polished to look at. What makes me a
-                stronger developer than my years alone suggest is my background
-                in tutoring: teaching mathematics has sharpened how I
-                communicate complex ideas, collaborate with others, and write
-                code that people can actually understand.
+                I build interfaces — clean, responsive, and actually pleasant to
+                use. React, TypeScript, and modern CSS are my main tools, but
+                what I care about most is the feel of the end result. My
+                background in tutoring math has made me a better communicator
+                and a more deliberate coder — if you can explain something
+                clearly, you probably understand it.
               </p>
               <p>
-                I'm currently focused on growing as a front-end developer while
-                deepening my software engineering fundamentals through my
-                studies. I'm always chasing the next challenge — whether that's
-                a tricky UI problem, a new framework, or a project that pushes
-                me somewhere I haven't been before.
+                Outside of development, I'm into graphic design, basketball,
+                and soccer. Design keeps my eye sharp for detail and proportion.
+                Sport keeps everything else in check. I try to bring the same
+                focus I have on the court or the pitch into the work — stay
+                patient, keep improving, and see things through.
               </p>
             </div>
 

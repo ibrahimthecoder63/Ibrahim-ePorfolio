@@ -171,7 +171,7 @@ const portfolios: Portfolio[] = [
         type: "Goal Planning Document",
         date: "February 2026",
         introduction:
-          "Six SMART goals developed from 3 undergraduate competency assessments",
+          "Six SMART goals developed from 3 undergraduate competency assessments.",
         reflection:
           "Writing goals in SMART format changed how I think about progress. Vague ambitions do not create accountability. These goals do — and I check them regularly to stay honest about where I actually am versus where I want to be.",
         critique:
@@ -189,7 +189,7 @@ const portfolios: Portfolio[] = [
     reflection:
       "Putting these two documents together made it clear that I think about my career in two different registers — the ideal and the practical. They are not always aligned, and that is probably more true for me right now than I would like to admit.",
     comments:
-      "The essay was easy to write because I could be aspirational. The assessment was harder because ranking things forces a real choice — and placing salary above helping people says something honest about where I am right now, even if it is not where I want to end up.",
+      "The reflection was easy to write because I could be aspirational. The assessment was harder because ranking things forces a real choice — and placing salary above helping people says something honest about where I am right now, even if it is not where I want to end up.",
     documents: [
       {
         title: "My Vision as an Engineer",
