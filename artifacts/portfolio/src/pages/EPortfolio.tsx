@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import {
@@ -412,6 +412,10 @@ function PDFPlaceholder({ doc }: { doc: PDFDoc }) {
 }
 
 export default function EPortfolio() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [openPortfolios, setOpenPortfolios] = useState<Set<string>>(
     new Set(["dreams"]),
   );
