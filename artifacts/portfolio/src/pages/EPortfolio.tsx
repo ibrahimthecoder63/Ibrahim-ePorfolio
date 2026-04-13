@@ -68,7 +68,7 @@ const portfolios: Portfolio[] = [
     reflection:
       "Looking back at my earliest motivations, I can see that curiosity has always been the engine. I wanted to understand how things work, and computers were the most interesting mystery I encountered. That curiosity has not faded — it has just become more directed.",
     comments:
-      "This portfolio is a living record. As my goals evolve and new milestones are reached, new documents and reflections will be added here. Each entry marks a point in the journey, not a final destination.",
+      "This portfolio is a record in progress. As my goals evolve and new milestones are reached, new documents and reflections will be added here. Each entry marks a point in the journey, not a final destination.",
     documents: [
       {
         title: "Childhood Dreams",
@@ -416,9 +416,7 @@ export default function EPortfolio() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [openPortfolios, setOpenPortfolios] = useState<Set<string>>(
-    new Set(),
-  );
+  const [openPortfolios, setOpenPortfolios] = useState<Set<string>>(new Set());
 
   const toggle = (id: string) => {
     setOpenPortfolios((prev) => {
