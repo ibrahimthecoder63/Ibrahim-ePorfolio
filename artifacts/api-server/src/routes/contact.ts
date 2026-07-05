@@ -3,6 +3,8 @@ import { Resend } from "resend";
 
 const router = Router();
 
+const defaultContactEmail = "ibrahim.mammad63@gmail.com";
+
 router.post("/contact", async (req: Request, res: Response) => {
   const { name, email, message } = req.body as {
     name?: string;
@@ -16,10 +18,25 @@ router.post("/contact", async (req: Request, res: Response) => {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_EMAIL;
+  const toEmail = process.env.CONTACT_EMAIL ?? defaultContactEmail;
 
   if (!apiKey || !toEmail) {
-    res.status(500).json({ success: false, error: "Contact form is not configured on the server." });
+    if (process.env.NODE_ENV === "production") {
+      res.status(500).json({ success: false, error: "Contact form is not configured on the server." });
+      return;
+    }
+
+    console.info(
+      {
+        toEmail,
+        name: name.trim(),
+        email: email.trim(),
+        message: message.trim(),
+      },
+      "Dev contact form submission received without Resend configured",
+    );
+
+    res.json({ success: true });
     return;
   }
 
