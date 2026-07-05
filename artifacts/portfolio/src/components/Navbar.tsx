@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, BookMarked } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { sitePath } from "@/lib/site-path";
 
 const links = [
   { name: "About", href: "#about" },
@@ -37,7 +38,7 @@ export default function Navbar() {
         }`}
       >
         {/* Gradient border bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
 
         <div className="flex items-center justify-between px-6 py-4 lg:px-12 lg:py-5">
           {/* Logo */}
@@ -47,11 +48,11 @@ export default function Navbar() {
             className="relative group text-lg font-black tracking-widest"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
               IM's Portfolio
             </span>
             <span className="text-foreground/80 text-sm align-super ml-0.5"></span>
-            <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
+            <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
           </a>
 
           {/* Desktop nav */}
@@ -69,7 +70,7 @@ export default function Navbar() {
 
             {/* My Journey link */}
             <Link
-              href="/eportfolio"
+              href={sitePath("/eportfolio")}
               className={`relative flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium transition-colors duration-200 group ${
                 isJourneyPage
                   ? "text-primary"
@@ -121,7 +122,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[65px] left-4 right-4 z-40 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl shadow-black/30 p-4"
+            className="fixed top-16.25 left-4 right-4 z-40 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl shadow-black/30 p-4"
           >
             <nav className="flex flex-col gap-1">
               {links.map((link) => (
@@ -135,7 +136,7 @@ export default function Navbar() {
                 </a>
               ))}
               <Link
-                href="/eportfolio"
+                href={sitePath("/eportfolio")}
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >

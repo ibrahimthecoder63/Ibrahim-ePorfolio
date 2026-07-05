@@ -11,6 +11,7 @@ import {
   Trophy,
   ImageIcon,
 } from "lucide-react";
+import { sitePath } from "@/lib/site-path";
 
 function DiplomaImage() {
   const [failed, setFailed] = useState(false);
@@ -21,7 +22,7 @@ function DiplomaImage() {
         Ontario Secondary School Diploma
       </p>
       <a
-        href="/diploma.png"
+        href={sitePath("/diploma.png")}
         target="_blank"
         rel="noopener noreferrer"
         className="block rounded-xl overflow-hidden border border-border/60 bg-muted/20 group cursor-pointer"
@@ -36,7 +37,7 @@ function DiplomaImage() {
         ) : (
           <div className="relative">
             <img
-              src="/diploma.png"
+              src={sitePath("/diploma.png")}
               alt="Ontario Secondary School Diploma"
               className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
               onError={() => setFailed(true)}
@@ -93,20 +94,6 @@ const skills = [
   { name: "Git", level: 70 },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 function SectionTitle({
   icon,
   label,
@@ -130,8 +117,8 @@ function SectionTitle({
 export default function Resume() {
   return (
     <section id="resume" className="py-24 relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-150 h-150 bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
@@ -151,7 +138,7 @@ export default function Resume() {
             </p>
           </div>
           <a
-            href="/ibrahim resume.pdf"
+            href={sitePath("/ibrahim resume.pdf")}
             download
             className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 shrink-0"
             data-testid="button-download-resume"
@@ -165,7 +152,6 @@ export default function Resume() {
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-12 items-start">
           {/* Left column — sidebar */}
           <motion.div
-            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -173,12 +159,11 @@ export default function Resume() {
           >
             {/* Identity card */}
             <motion.div
-              variants={itemVariants}
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 space-y-4"
             >
               <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-primary/30 mb-2">
                 <img
-                  src="/profile.jpg"
+                  src={sitePath("/profile.jpg")}
                   alt="Ibrahim Mammadov"
                   className="w-full h-full object-cover"
                 />
@@ -209,7 +194,6 @@ export default function Resume() {
 
             {/* Education */}
             <motion.div
-              variants={itemVariants}
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
             >
               <SectionTitle
@@ -241,7 +225,6 @@ export default function Resume() {
 
             {/* Awards & Diploma */}
             <motion.div
-              variants={itemVariants}
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
             >
               <SectionTitle
@@ -290,7 +273,6 @@ export default function Resume() {
 
             {/* Skill proficiency */}
             <motion.div
-              variants={itemVariants}
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6"
             >
               <SectionTitle
@@ -316,9 +298,9 @@ export default function Resume() {
                         transition={{
                           duration: 0.9,
                           delay: i * 0.06,
-                          ease: [0.22, 1, 0.36, 1],
+                          ease: "easeOut",
                         }}
-                        className="h-full rounded-full bg-gradient-to-r from-primary to-secondary"
+                        className="h-full rounded-full bg-linear-to-r from-primary to-secondary"
                       />
                     </div>
                   </div>
@@ -329,13 +311,11 @@ export default function Resume() {
 
           {/* Right column — experience timeline */}
           <motion.div
-            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
             <motion.div
-              variants={itemVariants}
               className="bg-card/60 backdrop-blur border border-border rounded-2xl p-6 lg:p-8"
             >
               <SectionTitle
@@ -347,11 +327,10 @@ export default function Resume() {
                 {experience.map((exp, i) => (
                   <motion.div
                     key={i}
-                    variants={itemVariants}
                     className="relative pl-8"
                   >
                     {/* Timeline dot */}
-                    <div className="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-background border-2 border-primary shadow-[0_0_12px_2px] shadow-primary/30" />
+                    <div className="absolute -left-1.75 top-1.5 w-3.5 h-3.5 rounded-full bg-background border-2 border-primary shadow-[0_0_12px_2px] shadow-primary/30" />
 
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
                       <div>

@@ -14,6 +14,16 @@ import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const useMailtoFallback = import.meta.env.VITE_CONTACT_MODE === "mailto";
+const contactRecipient = "ibrahim.mammad63@gmail.com";
+
+function buildMailtoLink(name: string, email: string, message: string) {
+  const subject = `Portfolio Contact from ${name.trim()}`;
+  const body = [`Name: ${name.trim()}`, `Email: ${email.trim()}`, "", message.trim()].join("\n");
+
+  return `mailto:${contactRecipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,6 +35,15 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
+
+    if (useMailtoFallback) {
+      window.location.href = buildMailtoLink(name, email, message);
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+      return;
+    }
 
     try {
       const res = await fetch("/api/contact", {
@@ -56,6 +75,10 @@ export default function Contact() {
 
   const inputClass =
     "w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 transition-all duration-200";
+  const successTitle = useMailtoFallback ? "Email Draft Ready!" : "Message Sent!";
+  const successCopy = useMailtoFallback
+    ? "Your email app should open with the message prefilled."
+    : "Thanks for reaching out. I'll get back to you as soon as possible.";
 
   return (
     <section
@@ -72,7 +95,7 @@ export default function Contact() {
           >
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">
               Let's build something{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                 together.
               </span>
             </h2>
@@ -134,18 +157,17 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center h-full min-h-[320px] text-center gap-4"
+                className="flex flex-col items-center justify-center h-full min-h-80 text-center gap-4"
               >
                 <div className="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <div>
                   <h3 className="text-xl font-display font-bold mb-2">
-                    Message Sent!
+                    {successTitle}
                   </h3>
                   <p className="text-muted-foreground text-sm max-w-xs">
-                    Thanks for reaching out. I'll get back to you as soon as
-                    possible.
+                    {successCopy}
                   </p>
                 </div>
                 <button

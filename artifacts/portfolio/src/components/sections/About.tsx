@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { sitePath } from "@/lib/site-path";
 
 function PlayIcon() {
   return (
@@ -58,11 +59,11 @@ export default function About() {
           >
             <div className="aspect-square max-w-md mx-auto relative rounded-3xl overflow-hidden border border-border/50 bg-card">
               <img
-                src="/profile.jpg"
+                src={sitePath("/profile.jpg")}
                 alt="Ibrahim Mammadov"
                 className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent mix-blend-overlay"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 blur-3xl rounded-full"></div>
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
@@ -128,7 +129,7 @@ export default function About() {
           >
             <video
               ref={videoRef}
-              src="/intro.mp4"
+              src={sitePath("/intro.mp4")}
               className="w-full h-full object-cover"
               onEnded={() => setPlaying(false)}
               playsInline
@@ -136,7 +137,7 @@ export default function About() {
 
             {/* Overlay — hides once playing */}
             <div
-              className={`absolute inset-0 bg-gradient-to-br from-primary/10 via-black/60 to-secondary/10 transition-opacity duration-500 ${
+              className={`absolute inset-0 bg-linear-to-br from-primary/10 via-black/60 to-secondary/10 transition-opacity duration-500 ${
                 playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"
               }`}
             />

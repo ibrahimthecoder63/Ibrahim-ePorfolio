@@ -18,6 +18,7 @@ import {
   Calendar,
 } from "lucide-react";
 import Footer from "@/components/Footer";
+import { sitePath } from "@/lib/site-path";
 
 const goal = {
   title: "Goal: Discover Myself",
@@ -176,7 +177,7 @@ const portfolios: Portfolio[] = [
           "Writing goals in SMART format changed how I think about progress. Vague ambitions do not create accountability. These goals do — and I check them regularly to stay honest about where I actually am versus where I want to be.",
         critique:
           "A few of the six goals were written to satisfy the assignment format rather than to genuinely challenge me. On reflection, the strongest ones are the ones tied to real deadlines — those are the ones I actually track. The weaker ones need to be rewritten with harder targets and clearer measures of success.",
-        url: "/SMART Goals Assessment.pdf",
+        url: sitePath("/SMART Goals Assessment.pdf"),
       },
     ],
   },
@@ -201,7 +202,7 @@ const portfolios: Portfolio[] = [
           "Writing this made me realise that my teaching approach and my learning approach are the same: start with a real problem, break it down, and build back up. That consistency across contexts tells me something about how I am wired.",
         critique:
           "The written reflection lists good values — creativity, perseverance, patience — but never backs them up with a real example. It also describes the future as 'prosperous for all,' which is too broad to say anything meaningful. The reflection would be stronger if it tied each ideal to an actual experience rather than keeping it abstract.",
-        url: "/Your Vision as an Engineer.pdf",
+        url: sitePath("/Your Vision as an Engineer.pdf"),
       },
       {
         title: "Values Perspective Assessment",
@@ -213,7 +214,7 @@ const portfolios: Portfolio[] = [
           "The most clarifying moment was ranking values against each other. When you have to choose between two things you care about, you learn what you actually prioritise. This exercise made explicit what I had been acting on implicitly.",
         critique:
           "Three of the top five work values are about salary and security, which sits in tension with ranking 'Help people' at seven. The conflict between high pay and family time is real but barely explored, and answering 'not really' to missing values feels too quick — creativity and autonomy don't appear anywhere in the list but clearly matter.",
-        url: "/Values Assessment.pdf",
+        url: sitePath("/Values Assessment.pdf"),
       },
     ],
   },
@@ -226,11 +227,7 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 22 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
+  visible: { opacity: 1, y: 0 },
 };
 
 function PDFPlaceholder({ doc }: { doc: PDFDoc }) {
@@ -428,18 +425,18 @@ export default function EPortfolio() {
   };
 
   return (
-    <div className="min-h-[100dvh] w-full bg-background text-foreground overflow-hidden selection:bg-primary/30 selection:text-foreground">
+    <div className="min-h-dvh w-full bg-background text-foreground overflow-hidden selection:bg-primary/30 selection:text-foreground">
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-border/30">
         <div className="flex items-center justify-between px-6 py-4 lg:px-12">
           <Link
-            href="/"
+            href={sitePath("/")}
             className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Portfolio
           </Link>
           <span
-            className="text-sm font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            className="text-sm font-black tracking-widest text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
             IM's Portfolio
@@ -466,7 +463,7 @@ export default function EPortfolio() {
                 ePortfolio
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-foreground via-foreground to-primary/70">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 pb-2 text-transparent bg-clip-text bg-linear-to-r from-foreground via-foreground to-primary/70">
               {goal.title}
             </h1>
             <div className="flex items-center gap-3 mb-10">

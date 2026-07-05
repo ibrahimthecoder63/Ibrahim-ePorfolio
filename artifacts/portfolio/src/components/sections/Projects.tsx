@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import { sitePath } from "@/lib/site-path";
 
 const projects = [
   {
@@ -8,7 +9,7 @@ const projects = [
       "A full-stack tutoring website built to connect students who need math help with a real tutor. Features an integrated session booking system and a contact form for inquiries — allowing interested students to reach out or reserve a slot directly. Built from scratch with server-side form handling in PHP, this was my first project that solved a real problem for real users rather than just serving as a coding exercise.",
     learned:
       "Building this taught me how to handle server-side form logic, structure a multi-page site around a user's goal, and think about the experience from the visitor's perspective — not just the developer's.",
-    image: "/project-1.png",
+    image: sitePath("/project-1.png"),
     tags: ["HTML", "CSS", "JavaScript", "PHP"],
     links: { github: "#", live: "https://demo-tutoring-website.replit.app/" },
   },
@@ -53,7 +54,7 @@ export default function Projects() {
               transition={{ duration: 0.7 }}
               className={`flex flex-col gap-8 lg:gap-16 ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center`}
             >
-              <div className="w-full lg:w-3/5 group relative rounded-2xl overflow-hidden border border-border/50 bg-card aspect-[16/9]">
+              <div className="w-full lg:w-3/5 group relative rounded-2xl overflow-hidden border border-border/50 bg-card aspect-video">
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay pointer-events-none"></div>
                 <img
                   src={project.image}

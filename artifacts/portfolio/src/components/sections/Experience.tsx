@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { sitePath } from "@/lib/site-path";
 
 const experiences = [
   {
     role: "Front-End Developer",
     company: "Treepz",
-    logo: "/treepz-logo.png",
+    logo: sitePath("/treepz-logo.png"),
     logoClass: "h-6",
     period: "Jan 2026 – Apr 2026",
     bullets: [
@@ -18,7 +19,7 @@ const experiences = [
   {
     role: "Math Tutor",
     company: "TUTORAX",
-    logo: "/tutorax-logo.png",
+    logo: sitePath("/tutorax-logo.png"),
     logoClass: "h-6",
     period: "Oct 2025 – Present",
     bullets: [
@@ -33,7 +34,7 @@ const experiences = [
   {
     role: "Deputy Returning Officer",
     company: "Elections Canada",
-    logo: "/elections-logo.png",
+    logo: sitePath("/elections-logo.png"),
     logoClass: "h-8",
     period: "Apr 2025",
     bullets: [
@@ -48,7 +49,7 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-125 h-125 bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
@@ -76,7 +77,7 @@ export default function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative pl-8 md:pl-12"
             >
-              <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
+              <div className="absolute -left-1.25 top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background" />
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-1">
                 <h3

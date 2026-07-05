@@ -7,6 +7,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { sitePath } from "@/lib/site-path";
 
 const typedPhrases = [
   "Computer Science Student",
@@ -87,16 +88,16 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden"
+      className="relative min-h-dvh flex items-center pt-20 overflow-hidden"
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
-          src="/hero-bg.png"
+          src={sitePath("/hero-bg.png")}
           alt="Abstract Background"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/50 via-background/70 to-background" />
       </div>
 
       {/* Ambient glow orbs */}
@@ -104,7 +105,7 @@ export default function Hero() {
         <motion.div
           animate={{ scale: [1, 1.12, 1], opacity: [0.22, 0.32, 0.22] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-40 -left-20 w-[650px] h-[650px] rounded-full bg-primary/20 blur-[120px]"
+          className="absolute -top-40 -left-20 w-162.5 h-162.5 rounded-full bg-primary/20 blur-[120px]"
         />
         <motion.div
           animate={{ scale: [1, 1.08, 1], opacity: [0.15, 0.25, 0.15] }}
@@ -114,7 +115,7 @@ export default function Hero() {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute -bottom-20 -right-20 w-[500px] h-[500px] rounded-full bg-secondary/20 blur-[100px]"
+          className="absolute -bottom-20 -right-20 w-125 h-125 rounded-full bg-secondary/20 blur-[100px]"
         />
       </div>
 
@@ -145,7 +146,7 @@ export default function Hero() {
             <span className="text-4xl md:text-6xl lg:text-7xl text-foreground block">
               Ibrahim
             </span>
-            <span className="text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-secondary block">
+            <span className="text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-linear-to-r from-primary via-primary/80 to-secondary block">
               Mammadov
             </span>
           </motion.h1>
@@ -166,7 +167,7 @@ export default function Hero() {
             <motion.span
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
-              className="inline-block w-[2px] h-[1.1em] bg-primary ml-0.5 translate-y-[1px]"
+              className="inline-block w-0.5 h-[1.1em] bg-primary ml-0.5 translate-y-px"
             />
           </motion.div>
 
@@ -221,7 +222,7 @@ export default function Hero() {
               className="group flex items-center gap-2.5 bg-white text-background px-8 py-4 rounded-full font-semibold text-base hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-lg shadow-black/20"
             >
               View Work
-              <ArrowDownRight className="w-5 h-5 group-hover:rotate-[-45deg] transition-transform duration-300" />
+              <ArrowDownRight className="w-5 h-5 group-hover:-rotate-45 transition-transform duration-300" />
             </a>
             <a
               href="#contact"
